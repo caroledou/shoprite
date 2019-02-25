@@ -1,3 +1,3 @@
 class Recipe < ApplicationRecord
-  has_many :components, dependent: :destroy
+  has_many :composants, dependent: :destroy
 end
