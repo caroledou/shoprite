@@ -1,2 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar-wagon <%= yield( :navbar_class) %>">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="images/logo.png" alt="logo">
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to new_user_session_path, class: 'navbar-wagon-link' do  %>
+      <div class="navbar-wagon-item">Login</div>
+    <% end %>
+    <%= link_to new_user_registration_path, class: 'navbar-wagon-link' do  %>
+      <div class="navbar-wagon-item">Signup</div>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
+</div>
+
+
+

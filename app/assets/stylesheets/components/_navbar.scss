@@ -10,6 +10,13 @@
   justify-content: space-between;
 }
 
+.navbar-home {
+  background: transparent;
+  box-shadow: none;
+  position: absolute;
+  width: 100%;
+}
+
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
