@@ -1,0 +1,37 @@
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="images/logo.png" alt="logo">
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Shop</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Cook</a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <div>Profile</div>
+          </li>
+          <li>
+            <div>My purchases</div>
+          </li>
+          <li>
+            <div>My favorites</div>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete, class: 'navbar-wagon-link' %>
+            <div>Log out</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
