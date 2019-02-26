@@ -8,16 +8,16 @@
 
 puts "Creating 4 recipes"
 
-lasagne = Recipe.new(name: 'Lasagnes traditionnelles italiennes', category: 'Lasagne', description: "Cette recette peut paraitre surprenante, mais d'après ma collègue (qui est italienne - pure souche!), il n'y a pas de sauce béchamel dans les VRAIES lasagnes... Concernant les plaques de lasagne, je conseille des plaques précuites. Sinon, cuire préalablement les plaques dans de l'eau bouillante et les étaler sur un torchon avant utilisation. [NDchef: attention à faire que les plaques de lasagne ne dépassent pas de la préparation (quitte à 'appuyer' un peu sur le desus), sinon cela donne des morceaux secs qui dépassent.]")
+lasagne = Recipe.new(name: 'Lasagnes traditionnelles italiennes', category: 'Lasagne', description: "Cette recette peut paraitre surprenante!", photo: cl_image_tag("dxjqm20a2u9fbuuoxhku", width: 400, height: 300, crop: :fill))
 lasagne.save!
 
-soupe = Recipe.new(name: 'Soupe de champignons', category: 'Soupe', description: 'Une bonne soupe automnale que vous pouvez accompagner de croûtons de pain grillé.')
+soupe = Recipe.new(name: 'Soupe de champignons', category: 'Soupe', description: 'Une bonne soupe automnale que vous pouvez accompagner de croûtons de pain grillé.', photo: cl_image_tag("t3yl030frjhkw0gnrgba", width: 400, height: 300, crop: :fill))
 soupe.save!
 
-fondant = Recipe.new(name: 'The fondant au chocolat sucré-salé', category: "Dessert", description: "On peut en faire une version aux fruits, en enfonçant légèrement dans la pâte avant cuisson les fruits souhaités. On peut aussi sucrer le gâteau avec un pot de crème de marron, pour une saveur un peu différente. On peut également ajouter de la poudre d'amandes, de noisettes, noix de coco, caramel liquide ou du café en poudre pour varier.")
+fondant = Recipe.new(name: 'The fondant au chocolat sucré-salé', category: "Dessert", description: "On peut en faire une version aux fruits!", photo: cl_image_tag("nyd9lg74hyqct0t2b2ge", width: 400, height: 300, crop: :fill))
 fondant.save!
 
-poulet = Recipe.new(name: 'Ailerons de poulet confits au miel', category: "Plat", description: "Plat très facile et surtout très bon marché.")
+poulet = Recipe.new(name: 'Ailerons de poulet confits au miel', category: "Plat", description: "Plat très facile et surtout très bon marché.", photo: cl_image_tag("gxfzjv2gpjufzzwo3ik4", width: 400, height: 300, crop: :fill))
 poulet.save
 
 puts "Done!"
