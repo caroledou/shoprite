@@ -22,7 +22,7 @@
       </div>
     </div>
   <% recipe_ids = [] %>
-  <% recipe_ids << params[:recipe_ids] unless params[:recipe_ids].nil? || Recipe.count == params[:recipe_ids].count %>
+  <% recipe_ids << params[:recipe_ids] unless params[:recipe_ids].nil? || all_recipes_skipped?(params[:recipe_ids]) %>
   <% recipe_ids.flatten! %>
   <% recipe_ids << @recipe.id %>
   <%= link_to "Yikes", recipes_path(recipe_ids: recipe_ids) %>
