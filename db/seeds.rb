@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Cleaning DB"
+Recipe.destroy_all
+
 puts "Creating 4 recipes"
 
 url = "https://assets.afcdn.com/recipe/20151023/223_w300h400c1cx1872cy2808.jpg"
