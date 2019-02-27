@@ -15,9 +15,11 @@
           <div class="card-time">
             <i class="fas fa-stopwatch">  <%= @recipe.cooking_time %>'</i>
           </div>
-          <div class="card-info">
-            <i class="fas fa-info"></i>
-          </div>
+          <%= link_to recipe_path(@recipe.id) do %>
+            <div class="card-info">
+              <i class="fas fa-info"></i>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
