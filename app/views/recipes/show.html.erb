@@ -14,11 +14,10 @@
             <h3>Reviews</h3>
             <p>Excellent !! J’ai juste pas mis le jus de citron, il en ai plus meilleur, je referai ce poulet !</p>
           </div>
-          <%= link_to recipes_path do %>
-            <div class="card-info" id="show-back">
+          <div class="card" id="show-back">
+            <%= link_to 'javascript:history.go(-1);' do %>
               <i class="fas fa-chevron-circle-left"></i>
-            </div>
-          <% end %>
+            <% end %>
           </div>
         </div>
       </div>

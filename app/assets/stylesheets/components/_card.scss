@@ -78,11 +78,17 @@
   color: black;
 }
 
-#show-back {
+#show-back a {
+  position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 20px;
   color: #ED462F;
+  text-decoration: none;
   font-size: 30px;
+}
+
+#show-back a:hover {
+  color: #ed796a;
 }
 
 #show-photo {
