@@ -17,6 +17,12 @@
   left: 20px;
   font-size: 30px;
   font-weight: lighter;
+  width: 450px;
+  margin-top: 0;
+}
+
+.card-name h2 {
+  margin-top: 10px;
 }
 
 .card-favorite {
@@ -78,6 +84,13 @@
   color: black;
 }
 
+#show-name li {
+  font-size: 18px;
+  text-shadow: 0 0 0 rgba(0,0,0,0);
+  font-weight: 400;
+
+}
+
 #show-back a {
   position: absolute;
   bottom: 10px;
@@ -93,7 +106,7 @@
 
 #show-photo {
   position: absolute;
-  top: 50px;
+  top: 30px;
   right: 20px;
   border: solid white 5px;
   box-shadow: 1px 1px 1px 1px lightgrey;
