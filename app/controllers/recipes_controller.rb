@@ -14,6 +14,12 @@ class RecipesController < ApplicationController
     @recipe = select_reject_recipes(recipes_to_select, recipes_to_reject).sample
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
+
+  private
+
   def select_reject_recipes(recipes, array_of_ids)
     # methods returns an array of recipes not yiked by user yet
     return recipes if array_of_ids.blank? || all_recipes_skipped?(array_of_ids)
