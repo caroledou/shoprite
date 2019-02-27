@@ -8,6 +8,7 @@
   position: relative;
   margin: auto;
   margin-bottom: 20px;
+  margin-top: 70px;
 }
 
 .card-name {
@@ -48,11 +49,59 @@
 
 .card-info {
   position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
   bottom: 10px;
   right: 20px;
   font-size: 25px;
   border-radius: 30px;
   border: solid 2px white;
   padding: 7px 20px;
+  text-decoration: none;
+  color: white;
 }
 
+.card-info:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-picture {
+  width: 200px;
+}
+
+#show-recipe {
+  background-color: white;
+}
+
+#show-name {
+  top: 10px;
+  left: 30px;
+  color: black;
+}
+
+#show-back a {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #ED462F;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#show-back a:hover {
+  color: #ed796a;
+}
+
+#show-photo {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border: solid white 5px;
+  box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+#show-review {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  color: black;
+}

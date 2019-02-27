@@ -1,5 +1,11 @@
 <div class="container">
   <h1>Recipes</h1>
+
+    <div class ="row">
+      <div class="col-xs-12">
+        <%= render 'shared/search' %>
+      </div>
+    </div>
     <div class="row">
       <div class="col-xs-12">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @recipe.photo, height: 300, width: 300, crop: :fill %>');">
@@ -15,18 +21,20 @@
           <div class="card-time">
             <i class="fas fa-stopwatch">  <%= @recipe.cooking_time %>'</i>
           </div>
-          <div class="card-info">
-            <i class="fas fa-info"></i>
-          </div>
+          <%= link_to recipe_path(@recipe.id) do %>
+            <div class="card-info">
+              <i class="fas fa-info"></i>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-4">
-        <%=link_to recipes_path(recipe_ids: array_of_burned_ids(params[:recipe_ids])) do %>
+        <%=link_to recipes_path(category: @category, recipe_ids: array_of_burned_ids(params[:recipe_ids])) do %>
           <p class="link-to-button">Yikes
-        <% end %>
-      </div>
+        </div>
+      <% end %>
       <div class="col-xs-2 col-offset-4">
         <p class="link-to-button" id="yummy">Yummy</p>
       </div>

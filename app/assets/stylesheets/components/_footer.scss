@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 40px;
+  color: #797979;
+}
+
+.footer-logo {
+  display: flex;
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: 'Lobster', 'cursive';
+  color: #ED462F;
+}
+
+.footer-content p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.footer-icons {
+  margin-right: 20px;
+  letter-spacing: 4px;
+}
