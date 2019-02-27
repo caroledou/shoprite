@@ -8,6 +8,7 @@
   position: relative;
   margin: auto;
   margin-bottom: 20px;
+  margin-top: 70px;
 }
 
 .card-name {
@@ -61,4 +62,40 @@
 
 .card-info:hover {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-picture {
+  width: 200px;
+}
+
+#show-recipe {
+  background-color: white;
+}
+
+#show-name {
+  top: 10px;
+  left: 30px;
+  color: black;
+}
+
+#show-back {
+  bottom: 10px;
+  left: 10px;
+  color: #ED462F;
+  font-size: 30px;
+}
+
+#show-photo {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border: solid white 5px;
+  box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+#show-review {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  color: black;
 }
