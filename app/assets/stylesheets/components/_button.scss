@@ -14,32 +14,32 @@ button:hover {
 
 .link-to-button {
   background-color: #ED462F;
-  text-decoration: none;
   color: white;
   border: solid 1px  #ED462F;
   border-radius: 20px;
   padding: 5px 30px;
   margin-top: 10px;
+  text-align: center;
+}
+
+.link-to-button a {
+  text-decoration: none;
+  color: white;
 }
 
 .link-to-button:hover {
   background-color: #ed796a;
   border: solid 1px #ed796a;
   text-decoration: none;
-   color: white;
-}
-
-#button-center {
-  background-color: #ED462F;
-  text-decoration: none;
   color: white;
-  margin-top: 20px;
-  border: solid 1px  #ED462F;
-  border-radius: 20px;
-  padding: 5px 300px;
 }
 
-#button-center:hover {
-  background-color: #e55a14;
-  border: solid 1px #e55a14;
+#yummy {
+  background-color: green;
+  border: solid 1px green;
+}
+
+#yummy:hover {
+  background-color: lightgreen;
+  border: solid 1px lightgreen;
 }
