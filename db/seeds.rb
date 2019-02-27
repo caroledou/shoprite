@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning DB"
+Composant.destroy_all
+Ingredient.destroy_all
 Recipe.destroy_all
 
 puts "Creating 7 recipes"
@@ -45,5 +47,23 @@ url = "https://image.afcdn.com/recipe/20170406/63820_w420h344c1cx1584cy2376.jpg"
 salade3 = Recipe.new(name: 'Salade de thon', category: "Salade", description: "Salade ideal pour le printemps ou l'ete, facile a digerer")
 salade3.remote_photo_url = url
 salade3.save!
+
+
+puts "Creating 4 ingredients"
+farine = Ingredient.create(name: 'farine')
+tomate = Ingredient.create(name: 'tomate')
+poulet_ing = Ingredient.create(name: 'poulet')
+chocolat = Ingredient.create(name: 'chocolat')
+
+puts "Creating 2 Composants"
+compo1 = Composant.new
+compo1.recipe = fondant
+compo1.ingredient = chocolat
+compo1.save!
+
+compo2 = Composant.new
+compo2.recipe = poulet
+compo2.ingredient = poulet_ing
+compo2.save!
 
 puts "Done!"
