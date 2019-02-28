@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning DB"
+OrderDetail.destroy_all
+Order.destroy_all
 Composant.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
@@ -74,6 +76,7 @@ curry4.save!
 puts "Created!"
 
 puts "Creating 4 Pasta recipes..."
+
 url = "https://img.buzzfeed.com/video-api-prod/assets/9ee2dadcbfcb4095872e6cdbaa24ff14/Thumb_A_FB.jpg?output-quality=60&resize=600:*"
 pasta1 = Recipe.new(name: 'One-Pot Lemon Garlic Shrimp Pasta', category:, 'Pasta', description: 'This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.', cooking_time: 30)
 pasta1.remote_photo_url = url
@@ -93,6 +96,8 @@ url = "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/1286
 pasta4 = Recipe.new(name: '', category:, 'Pasta', description: '', cooking_time: )
 pasta4.remote_photo_url = url
 pasta4.save!
+
+puts "Created!"
 
 puts "Creating Ingredients database..."
 
@@ -1283,3 +1288,5 @@ comp_105.save!
 # compo2.save!
 
 puts "105 Composants have been created!"
+
+puts "Done!"
