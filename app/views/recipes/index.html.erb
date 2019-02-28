@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Recipes</h1>
-
     <div class ="row">
       <div class="col-xs-12">
         <%= render 'shared/search' %>
@@ -36,7 +35,9 @@
         </div>
       <% end %>
       <div class="col-xs-2 col-offset-4">
-        <p class="link-to-button" id="yummy">Yummy</p>
+        <%= link_to orders_path(recipe_id: @recipe.id), method: 'post' do  %>
+          <p class="link-to-button" id="yummy">Yummy</p>
+        <% end %>
       </div>
     </div>
 </div>
