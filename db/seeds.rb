@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning DB"
+OrderDetail.destroy_all
+Order.destroy_all
 Composant.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
@@ -59,11 +61,19 @@ puts "Creating 2 Composants"
 compo1 = Composant.new
 compo1.recipe = fondant
 compo1.ingredient = chocolat
+compo1.quantity = 200
 compo1.save!
 
 compo2 = Composant.new
 compo2.recipe = poulet
 compo2.ingredient = poulet_ing
+compo2.quantity = 1000
 compo2.save!
+
+compo3 = Composant.new
+compo3.recipe = fondant
+compo3.ingredient = farine
+compo3.quantity = 500
+compo3.save!
 
 puts "Done!"
