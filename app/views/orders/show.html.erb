@@ -1,5 +1,8 @@
 <div class="container">
-  <h1>Order#create</h1>
-  <p><%= @order %></p>
+  <h1>Your Cart</h1>
+  <p><% @order.order_details.each do |order_detail| %></p>
+    <li><%= order_detail.composant.recipe.name %></li>
+    <li><%= order_detail.composant.quantity %><%= order_detail.composant.ingredient.name %></li>
+  <% end %>
   <%= render 'shared/weekly_planning' %>
 </div>
