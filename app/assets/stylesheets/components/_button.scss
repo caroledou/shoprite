@@ -22,24 +22,21 @@ button:hover {
   text-align: center;
 }
 
-.link-to-button a {
-  text-decoration: none;
-  color: white;
-}
 
 .link-to-button:hover {
   background-color: #ed796a;
   border: solid 1px #ed796a;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
+
 #yummy {
-  background-color: green;
-  border: solid 1px green;
+  background-color: #52B95E;
+  border: solid 1px #52B95E;
 }
 
 #yummy:hover {
-  background-color: lightgreen;
-  border: solid 1px lightgreen;
+  background-color: #5ACE68;
+  border: solid 1px #5ACE68;
 }
