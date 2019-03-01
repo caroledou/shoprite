@@ -33,7 +33,7 @@
               <div class="card-name" id="show-name">
                 <h2> <%= @recipe.name %></h2>
                 <h3>Ingrédients</h3>
-                <% @recipe.composants.each do |composant|%>
+                <% @recipe.composants.limit(5).each do |composant|%>
                 <ul class="list-styled">
                   <li><%= composant.quantity %><%= composant.ingredient.name.capitalize  %></li>
                 </ul>
