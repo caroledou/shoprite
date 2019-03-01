@@ -54,22 +54,22 @@ Recipe.destroy_all
 
 puts "Creating 4 Curry-based recipes..."
 url = "https://img.buzzfeed.com/video-api-prod/assets/dc21b5e545aa4c73ab3e1ec53ce9ad78/fb_thumb.jpg?output-quality=60&resize=600:*"
-curry1 = Recipe.new(name: 'Tofu Tikka Masala', category:, 'Curry', description: 'Dish of chunks of roasted marinated tofu (tofu tikka) in a spiced curry sauce. The sauce is usually creamy and orange-coloured', cooking_time: 45)
+curry1 = Recipe.new(name: 'Tofu Tikka Masala', category: 'Curry', description: 'Dish of chunks of roasted marinated tofu (tofu tikka) in a spiced curry sauce. The sauce is usually creamy and orange-coloured', cooking_time: 45)
 curry1.remote_photo_url = url
 curry1.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e0852050640d4474aaf3542d61f2568a/FB.jpg?output-quality=60&resize=600:*"
-curry2 = Recipe.new(name: 'Chicken Tikka Biryani', category:, 'Curry', description: 'Boneless chicken baked using skewers on a brazier (angeethi) after marinating in Indian spices and dahi (yogurt); originally from the Punjab region', cooking_time: 55)
+curry2 = Recipe.new(name: 'Chicken Tikka Biryani', category: 'Curry', description: 'Boneless chicken baked using skewers on a brazier (angeethi) after marinating in Indian spices and dahi (yogurt); originally from the Punjab region', cooking_time: 55)
 curry2.remote_photo_url = url
 curry2.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/0e036a2a94f84a15895b7a4e6b759717/BFV14763_TonkatsuCurry-ThumbB1080.jpg?output-quality=60&resize=600:*"
-curry3 = Recipe.new(name: 'Japanese Pork Cutlet (Tonkatsu)', category:, 'Curry', description: 'Readed, deep-fried pork cutle served with curry sauce', cooking_time: 60)
+curry3 = Recipe.new(name: 'Japanese Pork Cutlet (Tonkatsu)', category: 'Curry', description: 'Readed, deep-fried pork cutle served with curry sauce', cooking_time: 60)
 curry3.remote_photo_url = url
 curry3.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e61803b8efd84ca680a7769a52650830/BFV15753_Slow_Cooker_Butter_Chicken_Textless_Thumbnail.jpg?output-quality=60&resize=600:*"
-curry4 = Recipe.new(name: 'Slow Cooker Butter Chicken', category:, 'Curry', description: 'Marinated chicken with a rich spice mixture, cooked in a tandoor, served in a mild curry sauce rich in butter', cooking_time: 40)
+curry4 = Recipe.new(name: 'Slow Cooker Butter Chicken', category: 'Curry', description: 'Marinated chicken with a rich spice mixture, cooked in a tandoor, served in a mild curry sauce rich in butter', cooking_time: 40)
 curry4.remote_photo_url = url
 curry4.save!
 
@@ -78,22 +78,22 @@ puts "Created!"
 puts "Creating 4 Pasta recipes..."
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/9ee2dadcbfcb4095872e6cdbaa24ff14/Thumb_A_FB.jpg?output-quality=60&resize=600:*"
-pasta1 = Recipe.new(name: 'One-Pot Lemon Garlic Shrimp Pasta', category:, 'Pasta', description: 'This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.', cooking_time: 30)
+pasta1 = Recipe.new(name: 'One-Pot Lemon Garlic Shrimp Pasta', category: 'Pasta', description: 'This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.', cooking_time: 30)
 pasta1.remote_photo_url = url
 pasta1.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/0ea70bbbff66482f93f6adec328f0450/BFV14079_ChickenParmLasagna-ThumbTextless1080.jpg?output-quality=60&resize=600:*"
-pasta2 = Recipe.new(name: 'Chicken Parm Lasagna', category:, 'Pasta', description: 'A different Lasagna, stuffed with delicious crumbreaded chicken breasts', cooking_time: 30)
+pasta2 = Recipe.new(name: 'Chicken Parm Lasagna', category: 'Pasta', description: 'A different Lasagna, stuffed with delicious crumbreaded chicken breasts', cooking_time: 30)
 pasta2.remote_photo_url = url
 pasta2.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e1119589710f4cc19266fc5f05448933/BFV10386_Cheesy_Chicken_Alfredo_Pasta_Bake_Recipe_Photo_2.jpg?output-quality=60&resize=600:*"
-pasta3 = Recipe.new(name: 'Cheesy Chicken Alfredo Pasta Bake', category:, 'Pasta', description: 'A consistent pasta dish baked in a mixture of cheeses and bacon. A solid win for Winter days!', cooking_time: 35)
+pasta3 = Recipe.new(name: 'Cheesy Chicken Alfredo Pasta Bake', category: 'Pasta', description: 'A consistent pasta dish baked in a mixture of cheeses and bacon. A solid win for Winter days!', cooking_time: 35)
 pasta3.remote_photo_url = url
 pasta3.save!
 
 url = "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/128650.jpg?output-quality=60&resize=600:*"
-pasta4 = Recipe.new(name: '', category:, 'Pasta', description: '', cooking_time: )
+pasta4 = Recipe.new(name: '', category: 'Pasta', description: '', cooking_time: 20 )
 pasta4.remote_photo_url = url
 pasta4.save!
 
@@ -101,57 +101,57 @@ puts "Created!"
 
 puts "Creating Ingredients database..."
 
-tofu = Ingredient.create(name: 'Tofu', price_100gr: 3.80, kcal_100gr: 146, type: 'Dairy')
-lemon = Ingredient.create(name: 'Lemon', price_100gr: 1.40, kcal_100gr: 17, type: 'Citrus Fruits')
-yogurt = Ingredient.create(name: 'Yogurt', price_100gr: 1, kcal_100gr: 91, type: 'Dairy')
-garlic = Ingredient.create(name: 'Garlic', price_100gr: 0.5, kcal_100gr: 149, type: 'Lilium')
-ginger = Ingredient.create(name: 'Ginger', price_100gr: 0.7, kcal_100gr: 80, type: 'Lilium')
-salt = Ingredient.create(name: 'Salt', price_100gr: 4, kcal_100gr: 0, type: 'Mineral')
-ground_pepper = Ingredient.create(name: 'Ground Pepper', price_100gr: 1.40, kcal_100gr: 251, type: 'Spice')
-cumin = Ingredient.create(name: 'Cumin', price_100gr: 13, kcal_100gr: 375, type: 'Spice')
-garam_masala = Ingredient.create(name: 'Garam Masala', price_100gr: 5.95, kcal_100gr: 300, type: 'Spice')
-paprika = Ingredient.create(name: 'Paprika', price_100gr: 1.35, kcal_100gr: 282, type: 'Spice')
-oil = Ingredient.create(name: 'Oil', price_100gr: 0.7, kcal_100gr: 884, type: 'Oil')
-onion = Ingredient.create(name: 'Onion', price_100gr: 0.3, kcal_100gr: 44, type: 'Vegetable')
-tumeric = Ingredient.create(name: 'Tumeric', price_100gr: 4.75, kcal_100gr: 312, type: 'Spice')
-coriander = Ingredient.create(name: 'Coriander', price_100gr: 4.70, kcal_100gr: 298, type: 'Spice')
-chili_pwd = Ingredient.create(name: 'Chili Powder', price_100gr: 1.30, kcal_100gr: 282, type: 'Spice')
-tomato_sauce = Ingredient.create(name: 'Tomato Sauce', price_100gr: 1.95, kcal_100gr: 47, type: 'Vegetable')
-rice = Ingredient.create(name: 'Rice', price_100gr: 2.50, kcal_100gr: 351, type: 'Grain')
-chicken_breast = Ingredient.create(name: 'Chicken Breast', price_100gr: 5.05, kcal_100gr: 220, type: 'Poultry')
-lemon_juice = Ingredient.create(name: 'Lemon Juice', price_100gr: 1.10, kcal_100gr: 27, type: 'Citrus Fruits')
-tikka_masala = Ingredient.create(name: 'Tikka Masala', price_100gr: 4.95, kcal_100gr: 81, type: 'Spice')
-peppercorn = Ingredient.create(name: 'Peppercorn', price_100gr: 14.14, kcal_100gr: 251, type: 'Spice')
-tomatoes = Ingredient.create(name: 'Tomatoes', price_100gr: 3.32, kcal_100gr: 47, type: 'Vegetable')
-rice_basmati = Ingredient.create(name: 'Basmati Rice', price_100gr: 0.50, kcal_100gr: 342, type: 'Grain')
-pork_chops = Ingredient.create(name: 'Pork Chops', price_100gr: 6.70, kcal_100gr: 209, type: 'Pork')
-cheese_mozzarela = Ingredient.create(name: 'Mozzarela Cheese', price_100gr: 1.40, kcal_100gr: 244, type: 'Dairy')
-egg = Ingredient.create(name: 'Egg', price_100gr: 0.80, kcal_100gr: 143, type: 'Egg')
-breadcrumbs = Ingredient.create(name: 'Breadcrumbs', price_100gr: 0.41, kcal_100gr: 364, type: 'Bread')
-potatoe = Ingredient.create(name: 'Potatoe', price_100gr: 1.98, kcal_100gr: 93, type: 'Vegetable')
-carrot = Ingredient.create(name: 'Carrot', price_100gr: 0.46, kcal_100gr: 35, type: 'Vegetable')
-curry_pwd = Ingredient.create(name: 'Curry Powder', price_100gr: 2.36, kcal_100gr: 104, type: '')
-coconut_milk = Ingredient.create(name: 'Coconut Milk', price_100gr: 0.78, kcal_100gr: 42, type: 'Dairy')
-butter = Ingredient.create(name: 'Butter', price_100gr: 2.05, kcal_100gr: 742, type: 'Dairy')
-linguini = Ingredient.create(name: 'Linguini', price_100gr: 0.54, kcal_100gr: 359, type: 'Pasta')
-shrimp = Ingredient.create(name: 'Shrimp', price_100gr: 3.20, kcal_100gr: 119, type: 'Fish')
-oregano = Ingredient.create(name: 'Dried Oregano', price_100gr: 5.13, kcal_100gr: 265, type: 'Spice')
-spinach = Ingredient.create(name: 'Spinach', price_100gr: 2.63, kcal_100gr: 11, type: 'Vegetable')
-cheese_parmesan = Ingredient.create(name: 'Parmesan Cheese', price_100gr: 3.06, kcal_100gr: 383, type: 'Vegetable')
-parsley = Ingredient.create(name: 'Parsley', price_100gr: 5, kcal_100gr: 0, type: 'Vegetable')
-flour = Ingredient.create(name: 'Flour', price_100gr: 0.49, kcal_100gr: 346, type: 'Bread')
-cheese_ricotta = Ingredient.create(name: 'Ricotta Cheese', price_100gr: 2,80, kcal_100gr: 169, type: 'Dairy')
-lasagna_noodles = Ingredient.create(name: 'Lasagna Noodles', price_100gr: 0.74, kcal_100gr: 359, type: 'Pasta')
-basil = Ingredient.create(name: 'Fresh Basil', price_100gr: 10, kcal_100gr: 0, type: 'Vegetable')
-penne = Ingredient.create(name: 'Penne Pasta', price_100gr: 0.54, kcal_100gr: 354, type: 'Pasta')
-whole_cream = Ingredient.create(name: 'Whole Pasteurized Cream', price_100gr: 1.15, kcal_100gr: 334, type: 'Dairy')
-chicken_stock = Ingredient.create(name: 'Chicken Stock', price_100gr: 2.83, kcal_100gr: 282, type: 'Stock')
-bell_pepper_red = Ingredient.create(name: 'Red Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, type: 'Vegetable')
-bell_pepper_green = Ingredient.create(name: 'Green Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, type: 'Vegetable')
-bell_pepper_yellow = Ingredient.create(name: 'Yellow Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, type: 'Vegetable')
-cumin = Ingredient.create(name: 'Cumin', price_100gr: 15.31, kcal_100gr: 10, type: 'Spice')
-whole_milk = Ingredient.create(name: 'Whole Milk', price_100gr: 0.2, kcal_100gr: 51, type: 'Dairy')
-cheese_pepper = Ingredient.create(name: 'Pepper Cheese', price_100gr: 2.60, kcal_100gr: 342, type: 'Dairy')
+tofu = Ingredient.create(name: 'Tofu', price_100gr: 3.80, kcal_100gr: 146, ingredient_type: 'Dairy')
+lemon = Ingredient.create(name: 'Lemon', price_100gr: 1.40, kcal_100gr: 17, ingredient_type: 'Citrus Fruits')
+yogurt = Ingredient.create(name: 'Yogurt', price_100gr: 1, kcal_100gr: 91, ingredient_type: 'Dairy')
+garlic = Ingredient.create(name: 'Garlic', price_100gr: 0.5, kcal_100gr: 149, ingredient_type: 'Lilium')
+ginger = Ingredient.create(name: 'Ginger', price_100gr: 0.7, kcal_100gr: 80, ingredient_type: 'Lilium')
+salt = Ingredient.create(name: 'Salt', price_100gr: 4, kcal_100gr: 0, ingredient_type: 'Mineral')
+ground_pepper = Ingredient.create(name: 'Ground Pepper', price_100gr: 1.40, kcal_100gr: 251, ingredient_type: 'Spice')
+cumin = Ingredient.create(name: 'Cumin', price_100gr: 13, kcal_100gr: 375, ingredient_type: 'Spice')
+garam_masala = Ingredient.create(name: 'Garam Masala', price_100gr: 5.95, kcal_100gr: 300, ingredient_type: 'Spice')
+paprika = Ingredient.create(name: 'Paprika', price_100gr: 1.35, kcal_100gr: 282, ingredient_type: 'Spice')
+oil = Ingredient.create(name: 'Oil', price_100gr: 0.7, kcal_100gr: 884, ingredient_type: 'Oil')
+onion = Ingredient.create(name: 'Onion', price_100gr: 0.3, kcal_100gr: 44, ingredient_type: 'Vegetable')
+tumeric = Ingredient.create(name: 'Tumeric', price_100gr: 4.75, kcal_100gr: 312, ingredient_type: 'Spice')
+coriander = Ingredient.create(name: 'Coriander', price_100gr: 4.70, kcal_100gr: 298, ingredient_type: 'Spice')
+chili_pwd = Ingredient.create(name: 'Chili Powder', price_100gr: 1.30, kcal_100gr: 282, ingredient_type: 'Spice')
+tomato_sauce = Ingredient.create(name: 'Tomato Sauce', price_100gr: 1.95, kcal_100gr: 47, ingredient_type: 'Vegetable')
+rice = Ingredient.create(name: 'Rice', price_100gr: 2.50, kcal_100gr: 351, ingredient_type: 'Grain')
+chicken_breast = Ingredient.create(name: 'Chicken Breast', price_100gr: 5.05, kcal_100gr: 220, ingredient_type: 'Poultry')
+lemon_juice = Ingredient.create(name: 'Lemon Juice', price_100gr: 1.10, kcal_100gr: 27, ingredient_type: 'Citrus Fruits')
+tikka_masala = Ingredient.create(name: 'Tikka Masala', price_100gr: 4.95, kcal_100gr: 81, ingredient_type: 'Spice')
+peppercorn = Ingredient.create(name: 'Peppercorn', price_100gr: 14.14, kcal_100gr: 251, ingredient_type: 'Spice')
+tomatoes = Ingredient.create(name: 'Tomatoes', price_100gr: 3.32, kcal_100gr: 47, ingredient_type: 'Vegetable')
+rice_basmati = Ingredient.create(name: 'Basmati Rice', price_100gr: 0.50, kcal_100gr: 342, ingredient_type: 'Grain')
+pork_chops = Ingredient.create(name: 'Pork Chops', price_100gr: 6.70, kcal_100gr: 209, ingredient_type: 'Pork')
+cheese_mozzarela = Ingredient.create(name: 'Mozzarela Cheese', price_100gr: 1.40, kcal_100gr: 244, ingredient_type: 'Dairy')
+egg = Ingredient.create(name: 'Egg', price_100gr: 0.80, kcal_100gr: 143, ingredient_type: 'Egg')
+breadcrumbs = Ingredient.create(name: 'Breadcrumbs', price_100gr: 0.41, kcal_100gr: 364, ingredient_type: 'Bread')
+potatoe = Ingredient.create(name: 'Potatoe', price_100gr: 1.98, kcal_100gr: 93, ingredient_type: 'Vegetable')
+carrot = Ingredient.create(name: 'Carrot', price_100gr: 0.46, kcal_100gr: 35, ingredient_type: 'Vegetable')
+curry_pwd = Ingredient.create(name: 'Curry Powder', price_100gr: 2.36, kcal_100gr: 104, ingredient_type: '')
+coconut_milk = Ingredient.create(name: 'Coconut Milk', price_100gr: 0.78, kcal_100gr: 42, ingredient_type: 'Dairy')
+butter = Ingredient.create(name: 'Butter', price_100gr: 2.05, kcal_100gr: 742, ingredient_type: 'Dairy')
+linguini = Ingredient.create(name: 'Linguini', price_100gr: 0.54, kcal_100gr: 359, ingredient_type: 'Pasta')
+shrimp = Ingredient.create(name: 'Shrimp', price_100gr: 3.20, kcal_100gr: 119, ingredient_type: 'Fish')
+oregano = Ingredient.create(name: 'Dried Oregano', price_100gr: 5.13, kcal_100gr: 265, ingredient_type: 'Spice')
+spinach = Ingredient.create(name: 'Spinach', price_100gr: 2.63, kcal_100gr: 11, ingredient_type: 'Vegetable')
+cheese_parmesan = Ingredient.create(name: 'Parmesan Cheese', price_100gr: 3.06, kcal_100gr: 383, ingredient_type: 'Vegetable')
+parsley = Ingredient.create(name: 'Parsley', price_100gr: 5, kcal_100gr: 0, ingredient_type: 'Vegetable')
+flour = Ingredient.create(name: 'Flour', price_100gr: 0.49, kcal_100gr: 346, ingredient_type: 'Bread')
+cheese_ricotta = Ingredient.create(name: 'Ricotta Cheese', price_100gr: 2.80, kcal_100gr: 169, ingredient_type: 'Dairy')
+lasagna_noodles = Ingredient.create(name: 'Lasagna Noodles', price_100gr: 0.74, kcal_100gr: 359, ingredient_type: 'Pasta')
+basil = Ingredient.create(name: 'Fresh Basil', price_100gr: 10, kcal_100gr: 0, ingredient_type: 'Vegetable')
+penne = Ingredient.create(name: 'Penne Pasta', price_100gr: 0.54, kcal_100gr: 354, ingredient_type: 'Pasta')
+whole_cream = Ingredient.create(name: 'Whole Pasteurized Cream', price_100gr: 1.15, kcal_100gr: 334, ingredient_type: 'Dairy')
+chicken_stock = Ingredient.create(name: 'Chicken Stock', price_100gr: 2.83, kcal_100gr: 282, ingredient_type: 'Stock')
+bell_pepper_red = Ingredient.create(name: 'Red Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, ingredient_type: 'Vegetable')
+bell_pepper_green = Ingredient.create(name: 'Green Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, ingredient_type: 'Vegetable')
+bell_pepper_yellow = Ingredient.create(name: 'Yellow Bell Pepper', price_100gr: 0.68, kcal_100gr: 30, ingredient_type: 'Vegetable')
+cumin = Ingredient.create(name: 'Cumin', price_100gr: 15.31, kcal_100gr: 10, ingredient_type: 'Spice')
+whole_milk = Ingredient.create(name: 'Whole Milk', price_100gr: 0.2, kcal_100gr: 51, ingredient_type: 'Dairy')
+cheese_pepper = Ingredient.create(name: 'Pepper Cheese', price_100gr: 2.60, kcal_100gr: 342, ingredient_type: 'Dairy')
 
 puts "49 Ingredients database created!"
 
@@ -315,7 +315,7 @@ comp_031.save!
 
 comp_032 = Composant.new(quantity: 60)
 comp_032.recipe = curry2
-comp_032.ingredient = tomatoe
+comp_032.ingredient = tomatoes
 comp_032.save!
 
 comp_033 = Composant.new(quantity: 25)
