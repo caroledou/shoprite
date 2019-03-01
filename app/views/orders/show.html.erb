@@ -2,7 +2,9 @@
   <h1>Your Cart</h1>
   <h3><%= @order.order_details.blank? ? "No composant for the recipe selected" : @order.order_details.first.composant.recipe.name %></h3>
   <% @order.order_details.each do |order_detail| %>
-    <li><%= order_detail.composant.quantity %> gr <%=  order_detail.composant.recipe.name %></li>
+    <li><%=  order_detail.composant.recipe.name %></li>
   <% end %>
-  <%= render 'shared/weekly_planning' %>
+  <%= link_to recipes_path do %>
+    <i class="fas fa-chevron-circle-left"></i>
+  <% end %>
 </div>
