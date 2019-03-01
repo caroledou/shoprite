@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
     # Find exists already a pending order
     if order_pending = Order.find_by(status: 'pending')
     # Use the pending order
@@ -13,11 +12,18 @@ class OrdersController < ApplicationController
       @order = Order.new(user_id: current_user.id, status: 'pending')
       @order.save!
     end
+    # array vide
+    @recipes = []
+    # ajoute recette de params si pas deja array
+    @recipe = Recipe.find(params[:recipe_id])
+    unless @recipes.include?(@recipe)
+      @recipes << @recipe
     # Need to create the order_details for each composant
-    composants = Composant.where(recipe_id: @recipe.id)
-    composants.each do |composant|
-      order_detail = OrderDetail.new(order: @order, composant: composant)
-      order_detail.save!
+      composants = Composant.where(recipe_id: @recipe.id)
+      composants.each do |composant|
+        order_detail = OrderDetail.new(order: @order, composant: composant)
+        order_detail.save!
+      end
     end
     redirect_to order_path(@order)
   end
