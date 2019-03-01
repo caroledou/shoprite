@@ -93,7 +93,7 @@ pasta3.remote_photo_url = url
 pasta3.save!
 
 url = "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/128650.jpg?output-quality=60&resize=600:*"
-pasta4 = Recipe.new(name: '', category: 'Pasta', description: '', cooking_time: 20 )
+pasta4 = Recipe.new(name: 'One Pot Chicken Fajita Pasta', category: 'Pasta', description: 'A delicious pasta with savoury notes from, Mexico', cooking_time: 20 )
 pasta4.remote_photo_url = url
 pasta4.save!
 
