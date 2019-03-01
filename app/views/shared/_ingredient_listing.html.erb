@@ -1,0 +1,20 @@
+
+<% if recipe.composants.count <= 4  %>
+  <% @recipe.composants.each do |composant|%>
+    <ul class="list-styled">
+      <li><%= composant.quantity %><%= composant.ingredient.name.capitalize  %></li>
+    </ul>
+  <% end %>
+<% else %>
+   <% counter = [] %>
+   <% @recipe.composants.each do |composant|%>
+    <ul class="list-styled">
+      <li><%= composant.quantity %><%= composant.ingredient.name.capitalize  %></li>
+    </ul>
+  <% end %>
+<% end %>
+
+if @
+end
+
+
