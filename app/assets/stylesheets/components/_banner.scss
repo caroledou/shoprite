@@ -1,10 +1,28 @@
+.banner-frame {
+  padding: 0.5px;
+  background-color:white;
+}
+
 .banner {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: space-around;
   background-color: white;
+  // background-image:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
   h1 {
     color: #ED462F;
     font-size: 70px;
   }
+}
+
+.banner-content {
+  padding: 30px;
+  background-color: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3));
+  text-align: center;
+  border-radius: 5%;
 }
