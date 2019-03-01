@@ -13,6 +13,10 @@
   }
 }
 
-.active {
+.x-container.max {
+  max-width: 1200px;
+}
 
+.x-container.width {
+  width: 80%;
 }
