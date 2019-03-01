@@ -54,22 +54,22 @@ Recipe.destroy_all
 
 puts "Creating 4 Curry-based recipes..."
 url = "https://img.buzzfeed.com/video-api-prod/assets/dc21b5e545aa4c73ab3e1ec53ce9ad78/fb_thumb.jpg?output-quality=60&resize=600:*"
-curry1 = Recipe.new(name: 'Tofu Tikka Masala', category:, 'Curry', description: 'Dish of chunks of roasted marinated tofu (tofu tikka) in a spiced curry sauce. The sauce is usually creamy and orange-coloured', cooking_time: 45)
+curry1 = Recipe.new(name: 'Tofu Tikka Masala', category: 'Curry', description: 'Dish of chunks of roasted marinated tofu (tofu tikka) in a spiced curry sauce. The sauce is usually creamy and orange-coloured', cooking_time: 45)
 curry1.remote_photo_url = url
 curry1.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e0852050640d4474aaf3542d61f2568a/FB.jpg?output-quality=60&resize=600:*"
-curry2 = Recipe.new(name: 'Chicken Tikka Biryani', category:, 'Curry', description: 'Boneless chicken baked using skewers on a brazier (angeethi) after marinating in Indian spices and dahi (yogurt); originally from the Punjab region', cooking_time: 55)
+curry2 = Recipe.new(name: 'Chicken Tikka Biryani', category: 'Curry', description: 'Boneless chicken baked using skewers on a brazier (angeethi) after marinating in Indian spices and dahi (yogurt); originally from the Punjab region', cooking_time: 55)
 curry2.remote_photo_url = url
 curry2.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/0e036a2a94f84a15895b7a4e6b759717/BFV14763_TonkatsuCurry-ThumbB1080.jpg?output-quality=60&resize=600:*"
-curry3 = Recipe.new(name: 'Japanese Pork Cutlet (Tonkatsu)', category:, 'Curry', description: 'Readed, deep-fried pork cutle served with curry sauce', cooking_time: 60)
+curry3 = Recipe.new(name: 'Japanese Pork Cutlet (Tonkatsu)', category: 'Curry', description: 'Readed, deep-fried pork cutle served with curry sauce', cooking_time: 60)
 curry3.remote_photo_url = url
 curry3.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e61803b8efd84ca680a7769a52650830/BFV15753_Slow_Cooker_Butter_Chicken_Textless_Thumbnail.jpg?output-quality=60&resize=600:*"
-curry4 = Recipe.new(name: 'Slow Cooker Butter Chicken', category:, 'Curry', description: 'Marinated chicken with a rich spice mixture, cooked in a tandoor, served in a mild curry sauce rich in butter', cooking_time: 40)
+curry4 = Recipe.new(name: 'Slow Cooker Butter Chicken', category: 'Curry', description: 'Marinated chicken with a rich spice mixture, cooked in a tandoor, served in a mild curry sauce rich in butter', cooking_time: 40)
 curry4.remote_photo_url = url
 curry4.save!
 
@@ -78,22 +78,22 @@ puts "Created!"
 puts "Creating 4 Pasta recipes..."
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/9ee2dadcbfcb4095872e6cdbaa24ff14/Thumb_A_FB.jpg?output-quality=60&resize=600:*"
-pasta1 = Recipe.new(name: 'One-Pot Lemon Garlic Shrimp Pasta', category:, 'Pasta', description: 'This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.', cooking_time: 30)
+pasta1 = Recipe.new(name: 'One-Pot Lemon Garlic Shrimp Pasta', category: 'Pasta', description: 'This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.', cooking_time: 30)
 pasta1.remote_photo_url = url
 pasta1.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/0ea70bbbff66482f93f6adec328f0450/BFV14079_ChickenParmLasagna-ThumbTextless1080.jpg?output-quality=60&resize=600:*"
-pasta2 = Recipe.new(name: 'Chicken Parm Lasagna', category:, 'Pasta', description: 'A different Lasagna, stuffed with delicious crumbreaded chicken breasts', cooking_time: 30)
+pasta2 = Recipe.new(name: 'Chicken Parm Lasagna', category: 'Pasta', description: 'A different Lasagna, stuffed with delicious crumbreaded chicken breasts', cooking_time: 30)
 pasta2.remote_photo_url = url
 pasta2.save!
 
 url = "https://img.buzzfeed.com/video-api-prod/assets/e1119589710f4cc19266fc5f05448933/BFV10386_Cheesy_Chicken_Alfredo_Pasta_Bake_Recipe_Photo_2.jpg?output-quality=60&resize=600:*"
-pasta3 = Recipe.new(name: 'Cheesy Chicken Alfredo Pasta Bake', category:, 'Pasta', description: 'A consistent pasta dish baked in a mixture of cheeses and bacon. A solid win for Winter days!', cooking_time: 35)
+pasta3 = Recipe.new(name: 'Cheesy Chicken Alfredo Pasta Bake', category: 'Pasta', description: 'A consistent pasta dish baked in a mixture of cheeses and bacon. A solid win for Winter days!', cooking_time: 35)
 pasta3.remote_photo_url = url
 pasta3.save!
 
 url = "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/128650.jpg?output-quality=60&resize=600:*"
-pasta4 = Recipe.new(name: '', category:, 'Pasta', description: '', cooking_time: )
+pasta4 = Recipe.new(name: '', category: 'Pasta', description: '', cooking_time: 20 )
 pasta4.remote_photo_url = url
 pasta4.save!
 
@@ -140,7 +140,7 @@ spinach = Ingredient.create(name: 'Spinach', price_100gr: 2.63, kcal_100gr: 11, 
 cheese_parmesan = Ingredient.create(name: 'Parmesan Cheese', price_100gr: 3.06, kcal_100gr: 383, type: 'Vegetable')
 parsley = Ingredient.create(name: 'Parsley', price_100gr: 5, kcal_100gr: 0, type: 'Vegetable')
 flour = Ingredient.create(name: 'Flour', price_100gr: 0.49, kcal_100gr: 346, type: 'Bread')
-cheese_ricotta = Ingredient.create(name: 'Ricotta Cheese', price_100gr: 2,80, kcal_100gr: 169, type: 'Dairy')
+cheese_ricotta = Ingredient.create(name: 'Ricotta Cheese', price_100gr: 2.80, kcal_100gr: 169, type: 'Dairy')
 lasagna_noodles = Ingredient.create(name: 'Lasagna Noodles', price_100gr: 0.74, kcal_100gr: 359, type: 'Pasta')
 basil = Ingredient.create(name: 'Fresh Basil', price_100gr: 10, kcal_100gr: 0, type: 'Vegetable')
 penne = Ingredient.create(name: 'Penne Pasta', price_100gr: 0.54, kcal_100gr: 354, type: 'Pasta')
