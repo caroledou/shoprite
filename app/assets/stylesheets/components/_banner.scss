@@ -1,5 +1,10 @@
+.banner-frame {
+  padding: 0.5px;
+  background-color:white;
+}
+
 .banner {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: space-around;
   background-color: white;
@@ -7,8 +12,8 @@
   background-repeat: no-repeat;
   background-size:100% 100%;
   align-items: center;
-  margin: 50px;
-  padding: 30px;
+  margin: 20px;
+  padding: 20px;
   h1 {
     color: #ED462F;
     font-size: 70px;
