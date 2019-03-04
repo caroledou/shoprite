@@ -4,7 +4,7 @@
     <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
     <% @order.order_details.where(day: key).each do |detail| %>
      <ul>
-       <li><%= detail.composant.ingredient.name %></li>
+       <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient.name %></li>
      </ul>
     <% end %>
   <% end %>
