@@ -12,8 +12,6 @@ module RecipesHelper
   end
 
   def display_recipe_name(id)
-    Recipe.find(id).name
+    Recipe.find(id).name if id != ""
   end
-
-
 end
