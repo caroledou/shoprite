@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
     if @order = Order.find_by(user_id: current_user.id, status: 'pending')
       day = find_correct_day(@order)
       creating_composant_and_order_details(@order, @recipe, day)
-      raise
       add_recipe_id_to_correct_day(@order, @recipe)
       @order.save!
     else
@@ -26,7 +25,7 @@ class OrdersController < ApplicationController
   private
 
   def find_correct_day(order)
-    order.recipes.select { |k, value| order.recipes[k] = value.blank? }.keys.first
+    order.recipes.select { |k, value| value.blank? }.keys.first
   end
 
   def add_recipe_id_to_correct_day(order, recipe)
