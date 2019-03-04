@@ -33,7 +33,7 @@ puts "------------------------------------------"
 
 recipe_counter = 0
 
-recipe_id_db.take(3).each do |id|
+recipe_id_db.each do |id|
   url_recipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=#{id}"
   recipe_serialized = open(url_recipe).read
   recipe = JSON.parse(recipe_serialized)
