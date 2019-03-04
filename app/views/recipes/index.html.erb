@@ -39,7 +39,7 @@
                 <h3>Ingrédients</h3>
                 <% @recipe.composants.limit(5).each do |composant|%>
                 <ul class="list-styled">
-                  <li><%= composant.quantity %><%= composant.ingredient.name.capitalize  %></li>
+                  <li><%= composant.quantity %><%= composant.ingredient.capitalize  %></li>
                 </ul>
                 <% end %>
               </div>
