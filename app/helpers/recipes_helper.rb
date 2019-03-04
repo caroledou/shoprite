@@ -10,4 +10,10 @@ module RecipesHelper
     recipe_ids << @recipe.id
     return recipe_ids.flatten
   end
+
+  def display_recipe_name(id)
+    Recipe.find(id).name
+  end
+
+
 end

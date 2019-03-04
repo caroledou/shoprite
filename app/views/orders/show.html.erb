@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Your Cart</h1>
   <% @order.recipes.each do |key, value| %>
-    <h2><%= key %> : <%= value %></h2>
+    <h2><%= key %> : <%=  %></h2>
   <% end %>
   <%= link_to recipes_path do %>
     <i class="fas fa-chevron-circle-left"></i>
