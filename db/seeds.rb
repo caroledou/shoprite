@@ -62,16 +62,14 @@ recipe_id_db.take(3).each do |id|
     recipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=#{recipe['meals'].first['idMeal']}"
     recipe_serialized = open(url_recipe).read
     recipe = JSON.parse(recipe_serialized)
-    # p "recipe['meals'].first['strIngredient#{number}']"
 
     if recipe["meals"].first["strIngredient#{number}"] != ""
       new_composant = Composant.new(
         recipe_id: new_recipe.id,
-        # ingredient_name: recipe["meals"].first["strIngredient#{number}"],
-        quantity: recipe["meals"].first["strMeasure#{number}"]
+        ingredient: recipe["meals"].first["strIngredient#{number}"],
+        quantity: recipe["meals"].first["strMeasure#{number}"],
+        price: rand(1..20).to_i
       )
-      # puts "strMeasure#{number}"
-      # puts recipe["meals"]
       new_composant.save!
       composant_counter += 1
       p "Composant #{composant_counter} for recipe #{recipe_counter} created!"
