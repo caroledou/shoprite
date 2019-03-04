@@ -16,10 +16,7 @@ class OrdersController < ApplicationController
           order_detail.save!
         end
       end
-      [:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday].each do |day|
-        @order.recipes[day] = @recipe.id if @order.recipes[day] == ""
-        break if @order.recipes[day] == @recipe.id
-      end
+      add_recipe_id_to_correct_day(@order, @recipe)
       @order.save!
     else
       recipes = {
@@ -47,5 +44,11 @@ class OrdersController < ApplicationController
     end
     # ajoute recette de params si pas deja array
     redirect_to order_path(@order)
+  end
+
+  def add_recipe_id_to_correct_day(order, recipe)
+    order.recipes.each do |key, value|
+      return order.recipes[key] = recipe.id if value == ""
+    end
   end
 end
