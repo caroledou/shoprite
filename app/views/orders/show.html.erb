@@ -1,7 +1,12 @@
 <div class="container">
   <h1>Your Cart</h1>
   <% @order.recipes.each do |key, value| %>
-    <h2><%= key %> : <%= value %></h2>
+    <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
+    <% @order.order_details.where(day: key).each do |detail| %>
+     <ul>
+       <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient.name %></li>
+     </ul>
+    <% end %>
   <% end %>
   <%= link_to recipes_path do %>
     <i class="fas fa-chevron-circle-left"></i>
