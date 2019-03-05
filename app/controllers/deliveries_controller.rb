@@ -6,6 +6,7 @@ class DeliveriesController < ApplicationController
   def new
     @order = Order.find(params[:order_id])
     @delivery = Delivery.new
+    @delivery.address = current_user.address
   end
 
   def create
