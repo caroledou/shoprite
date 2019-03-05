@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'deliveries/new'
+  get 'deliveries/create'
+  get 'deliveries/show'
   devise_for :users
   root to: 'pages#home'
   resources :recipes, only: [:index, :show]

@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_133105) do
   create_table "deliveries", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "order_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.date "date"
     t.time "time"
     t.datetime "created_at", null: false
