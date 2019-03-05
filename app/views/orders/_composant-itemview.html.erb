@@ -1,0 +1,30 @@
+
+<% @order.recipes.each do |key, value| %>
+<div class="recipe-cart <%= key %> col-xs-8 col-xs-offset-2">
+  <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
+  <i class="fas fa-chevron-down"></i>
+</div>
+<div class="ingredient-cart <%= key %> col-xs-8 col-xs-offset-2">
+  <% @order.order_details.where(day: key).each do |detail| %>
+   <ul class="list-unstyled">
+     <li>
+      <div class="composant-view">
+        <img class="composant-img" src="https://www.themealdb.com/images/ingredients/#{detail.composant.ingredient}-Small.png">
+        <div class="composant-name">
+          <h3><%= detail.composant.quantity %>gr <%= detail.composant.ingredient %></h3>
+        </div>
+        <div class="composant-price">
+          <h3><strong><%= detail.composant.price_cents %></strong></h3>
+        </div>
+        <div>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </li>
+   </ul>
+  <% end %>
+</div>
+<% end %>
