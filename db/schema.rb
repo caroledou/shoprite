@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_01_131122) do
+ActiveRecord::Schema.define(version: 2019_03_05_112019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_03_01_131122) do
     t.bigint "ingredient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ingredient"
+    t.integer "price_cents", default: 0, null: false
     t.index ["ingredient_id"], name: "index_composants_on_ingredient_id"
     t.index ["recipe_id"], name: "index_composants_on_recipe_id"
   end
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_131122) do
     t.boolean "no", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "day"
     t.index ["composant_id"], name: "index_order_details_on_composant_id"
     t.index ["order_id"], name: "index_order_details_on_order_id"
   end
@@ -50,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_03_01_131122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "recipes"
+    t.integer "amount_cents", default: 0, null: false
+    t.jsonb "payment"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

@@ -1,10 +1,31 @@
 <div class="container">
   <h1>Your Cart</h1>
-  <h3><%= @order.order_details.blank? ? "No composant for the recipe selected" : @order.order_details.first.composant.recipe.name %></h3>
-  <% @order.order_details.each do |order_detail| %>
-    <li><%=  order_detail.composant.recipe.name %></li>
-  <% end %>
-  <%= link_to recipes_path do %>
-    <i class="fas fa-chevron-circle-left"></i>
-  <% end %>
+  <div class="row">
+    <% @order.recipes.each do |key, value| %>
+    <div class="recipe-cart <%= key %> col-xs-8 col-xs-offset-2">
+      <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="ingredient-cart <%= key %> col-xs-8 col-xs-offset-2">
+      <% @order.order_details.where(day: key).each do |detail| %>
+       <ul class="list-unstyled">
+         <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient %> <%= detail.composant.price_cents %>chf</li>
+       </ul>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <%= render "payments/total" %>
+
+  <div class="col-xs-2 col-offset-4">
+    <%= link_to order_payments_path(order_id: @order.id), method: 'post' do  %>
+      <p class="link-to-button" id="yummy">Pay</p>
+    <% end %>
+  </div>
+
 </div>
+
+  <%= link_to recipes_path do %>
+    <i class="fas fa-chevron-circle-left" style="color: red; font-size: 40px; margin-bottom: 10px; "></i>
+  <% end %>
+
