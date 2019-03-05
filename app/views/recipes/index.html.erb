@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="button-element">
+    <div class="buttons-element">
       <div>
         <%=link_to recipes_path(category: @category, recipe_ids: array_of_burned_ids(params[:recipe_ids])) do %>
           <p class="link-to-button">Yikes</p>
@@ -65,6 +65,9 @@
           <p class="link-to-button" id="yummy">Yummy</p>
         <% end %>
       </div>
+    </div>
+    <div class="cart-button">
+      <p class="link-to-button">See cart</p>
     </div>
   </div>
 </div>
