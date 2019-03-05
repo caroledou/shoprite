@@ -1,7 +1,10 @@
 <div class="planning">
   <% @order.recipes.each do |key, value| %>
-    <div>
-      <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
+    <div class="row-planning">
+      <h2><%= key.capitalize %> : </h2>
+      <ul class="list-unstyled">
+        <li><%= display_recipe_name(value) %></li>
+      </ul>
     </div>
   <% end %>
 </div>
