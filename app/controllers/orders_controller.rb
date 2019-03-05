@@ -7,8 +7,11 @@ class OrdersController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     if @order = Order.find_by(user_id: current_user.id, status: 'pending')
       day = find_correct_day(@order)
+      p day
       creating_composant_and_order_details(@order, @recipe, day)
-      add_recipe_id_to_correct_day(@order, @recipe)
+      puts "--------------"
+      p add_recipe_id_to_correct_day(@order, @recipe)
+      p @order
       @order.save!
     else
       recipes = { monday: "", tuesday: "", wednesday: "", thursday: "", friday: "", saturday: "", sunday: "" }
@@ -19,7 +22,7 @@ class OrdersController < ApplicationController
       @order.recipes = recipes
       @order.save!
     end
-    redirect_to order_path(@order)
+    redirect_to recipes_path
   end
 
   private
