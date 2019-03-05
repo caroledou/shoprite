@@ -2,7 +2,7 @@ class Delivery < ApplicationRecord
   belongs_to :user
   belongs_to :order
 
-  validates :date, :time, presence: true
+  validates :date, :time, :address, presence: true
   validate :date_cannot_be_in_the_past
   validate :time_cannot_be_in_the_past
 

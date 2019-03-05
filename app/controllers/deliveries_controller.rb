@@ -21,6 +21,6 @@ class DeliveriesController < ApplicationController
   end
 
   def delivery_params
-    params.require(:delivery).permit(:order_id, :user_id, :status, :date, :time)
+    params.require(:delivery).permit(:order_id, :user_id, :status, :date, :time, :address)
   end
 end
