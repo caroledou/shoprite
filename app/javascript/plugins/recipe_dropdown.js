@@ -13,9 +13,8 @@
   // });
 // });
 
-const recipeCart = document.querySelector(".recipe-cart")
 
-if (recipeCart) {
+const recipeDrop = () => {
   const cartMonday = document.querySelector(".recipe-cart.monday");
   const ingredientMonday = document.querySelector(".ingredient-cart.monday");
   ingredientMonday.style.display = "none"
@@ -92,4 +91,6 @@ if (recipeCart) {
     }
   });
 };
+
+export { recipeDrop };
 

@@ -1,6 +1,14 @@
 import "bootstrap";
-
 import "../plugins/flatpickr"
-import "../plugins/flipback"
-import "../plugins/flipfront"
-import "../plugins/recipe_dropdown"
+
+import { flipcardMoveBack } from '../plugins/flipback';
+
+flipcardMoveBack();
+
+import { flipcardMoveFront } from '../plugins/flipfront';
+
+flipcardMoveFront();
+
+import { recipeDrop } from '../plugins/recipe_dropdown';
+
+recipeDrop();
