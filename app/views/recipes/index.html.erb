@@ -67,7 +67,9 @@
       </div>
     </div>
     <div class="cart-button">
-      <p class="link-to-button">See cart</p>
+      <%= link_to order_path(@order) do %>
+        <p class="link-to-button">See cart</p>
+      <% end %>
     </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
     if @order.nil?
       recipes = { monday: "", tuesday: "", wednesday: "", thursday: "", friday: "", saturday: "", sunday: "" }
       @order = Order.new(user_id: current_user.id, status: 'pending', recipes: recipes)
+      @order.save!
     end
 
     if params[:category].present?
