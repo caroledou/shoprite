@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+  <h1>Total amount</h1>
+    <% total_amount = 0 %>
+    <% @order.recipes.each do |key, value| %>
+      <% @order.order_details.where(day: key).each do |detail| %>
+      <% total_amount += detail.composant.price_cents %>
+      <% end %>
+    <% end %>
+    <%= humanized_money_with_symbol(total_amount) %>
+  </div>
+</div>
+

@@ -15,7 +15,17 @@
     </div>
     <% end %>
   </div>
+  <%= render "payments/total" %>
+
+  <div class="col-xs-2 col-offset-4">
+    <%= link_to order_payments_path(order_id: @order.id), method: 'post' do  %>
+      <p class="link-to-button" id="yummy">Pay</p>
+    <% end %>
+  </div>
+
+</div>
+
   <%= link_to recipes_path do %>
     <i class="fas fa-chevron-circle-left" style="color: red; font-size: 40px; margin-bottom: 10px; "></i>
   <% end %>
-</div>
+

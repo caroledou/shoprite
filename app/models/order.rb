@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
   belongs_to :user
   has_many :order_details
-  monetize :amounts_cents
+  monetize :amount_cents
 end
