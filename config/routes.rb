@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show]
   resources :orders, only: [:create, :show] do
     resources :deliveries, only: [:new, :create]
+    resources :payments, only: [:new, :create]
   end
-  resources :deliveries, only: [:show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :deliveries, only: [:show]    
 end

@@ -1,0 +1,27 @@
+<div class="purchase-conf-page"> <!-- class to be created-->
+
+  <h1>Purchase details</h1>
+
+  <h1>Purchase of Order <%= @order.id %></h1>
+  <%= form_tag order_payments_path(@order) do %>
+    <article>
+      <label class="amount">
+        <span><%= render "payments/total" %></span>
+      </label>
+    </article>
+
+    <!-- Insert delivery details here -->
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="My Recipes"
+      data-email="<%= current_user.email %>"
+      data-description="Order <%= @order.id %>"
+      data-amount="<%= @order.amount_cents*100 %>"
+      data-currency="<%= @order.amount.currency %>"></script>
+
+  <% end %>
+
+</div>
+
+
