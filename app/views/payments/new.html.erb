@@ -6,7 +6,7 @@
   <%= form_tag order_payments_path(@order) do %>
     <article>
       <label class="amount">
-        <span>Amount: <%= render "payments/total" %></span>
+        <span><%= render "payments/total" %></span>
       </label>
     </article>
 
@@ -17,7 +17,7 @@
       data-name="My Recipes"
       data-email="<%= current_user.email %>"
       data-description="Order <%= @order.id %>"
-      data-amount="<%= @order.amount_cents %>"
+      data-amount="<%= @order.amount_cents*100 %>"
       data-currency="<%= @order.amount.currency %>"></script>
 
   <% end %>
