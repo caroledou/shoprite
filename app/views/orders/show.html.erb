@@ -9,13 +9,26 @@
     <div class="ingredient-cart <%= key %> col-xs-8 col-xs-offset-2">
       <% @order.order_details.where(day: key).each do |detail| %>
        <ul class="list-unstyled">
-         <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient.capitalize %></li>
+         <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient.capitalize %> <%= detail.composant.price_cents %>chf</li>
        </ul>
       <% end %>
     </div>
     <% end %>
   </div>
+  <%= render "payments/total" %>
+
+  <div class="col-xs-2 col-offset-4">
+    <%= link_to order_payments_path(order_id: @order.id), method: 'post' do  %>
+      <p class="link-to-button" id="yummy">Pay</p>
+    <% end %>
+  </div>
+
+</div>
+
   <%= link_to recipes_path do %>
     <i class="fas fa-chevron-circle-left" style="color: red; font-size: 40px; margin-bottom: 10px; "></i>
   <% end %>
-</div>
+
+  <div>
+    <%= link_to 'Set delivery', new_order_delivery_path(@order), class: "link-to-button"  %>
+  </div>
