@@ -2,6 +2,14 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
   def new
+    total_amount = 0
+    @order.recipes.each do |key, value|
+      @order.order_details.where(day: key).each do |detail|
+        total_amount += detail.composant.price_cents
+      end
+    end
+    @order.amount_cents = total_amount
+    @order.save!
   end
 
   def create
@@ -17,7 +25,7 @@ class PaymentsController < ApplicationController
     currency:     @order.amount.currency
   )
 
-  @order.update(payment: charge.to_json, state: 'paid')
+  @order.update(payment: charge.to_json, status: 'paid')
   redirect_to order_path(@order)
 
   rescue Stripe::CardError => e
