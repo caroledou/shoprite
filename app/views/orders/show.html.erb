@@ -9,7 +9,7 @@
     <div class="ingredient-cart <%= key %> col-xs-8 col-xs-offset-2">
       <% @order.order_details.where(day: key).each do |detail| %>
        <ul class="list-unstyled">
-         <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient.name %></li>
+         <li><%= detail.composant.quantity %>gr <%= detail.composant.ingredient %></li>
        </ul>
       <% end %>
     </div>
