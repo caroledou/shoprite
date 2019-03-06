@@ -2,6 +2,7 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning DB"
+Delivery.destroy_all
 OrderDetail.destroy_all
 Order.destroy_all
 Composant.destroy_all
@@ -68,7 +69,7 @@ recipe_id_db.each do |id|
         recipe_id: new_recipe.id,
         ingredient: recipe["meals"].first["strIngredient#{number}"],
         quantity: recipe["meals"].first["strMeasure#{number}"],
-        price_cents: rand(1..20)*100.to_i
+        price_cents: rand(100..2000)/100.round.to_i
       )
       new_composant.save!
       composant_counter += 1

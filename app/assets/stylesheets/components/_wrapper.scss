@@ -1,3 +1,24 @@
 .wrapper {
   margin-top: 70px;
 }
+
+.wrapper-grey {
+  margin-top: 70px;
+  background-color: grey;
+  height: calc(100vh - 180px);
+}
+
+.wrapper-lightred {
+  height: 120px;
+  background-color: #f26e5c;
+}
+
+.wrapper-lime {
+  height: 250px;
+  background-color: #83f23a;
+}
+
+.wrapper-sunrise {
+  height: 350px;
+  background-color: #f2df3a;
+}

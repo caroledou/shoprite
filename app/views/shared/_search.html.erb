@@ -9,7 +9,7 @@
 </div> -->
 
 
-<div class="form-inline" style="margin-top:25px;">
+<div class="form-inline">
   <%= form_tag recipes_path, method: :get do %>
     <%= select_tag :category, options_for_select(Recipe::RECIPE_CATEGORIES), prompt: "Select something" %>
     <%= submit_tag "Find recipes", class: 'link-to-button' %>
