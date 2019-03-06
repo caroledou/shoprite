@@ -11,6 +11,9 @@
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
       <% if user_signed_in? %>
+        <div class="logo">
+          <h2>Shoprite</h2>
+        </div>
 
         <!-- Links when logged in -->
         <%= link_to "Shop", recipes_path, class: "navbar-wagon-item navbar-wagon-link" %>
@@ -45,6 +48,9 @@
           </div>
         </div>
       <% else %>
+        <div class="logo">
+          <h2>Shoprite</h2>
+        </div>
         <!-- Login link (when logged out) -->
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
