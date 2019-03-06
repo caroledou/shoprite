@@ -2,6 +2,7 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning DB"
+Delivery.destroy_all
 OrderDetail.destroy_all
 Order.destroy_all
 Composant.destroy_all
