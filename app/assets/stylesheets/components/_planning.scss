@@ -1,14 +1,14 @@
 .planning {
   background-color: white;
   min-width: 100%;
+  box-shadow: 1px 1px 3px 3px #F0F0F0;
 }
 
 .planning h2 {
-  font-size: 15px;
+  font-size: 30px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 5px;
-  font-family: 'Lato', 'sans-serif';
   font-weight: 700;
   padding-top: 7px;
   padding-left: 10px;
@@ -16,7 +16,7 @@
 }
 
 .planning li {
-  font-size: 12px;
+  font-size: 18px;
   margin-bottom: 0;
   margin-left: 5px;
   padding-left: 10px;
@@ -24,8 +24,8 @@
 
 
 .row-planning {
-  height: 67px;
-  border-bottom: solid 1px lightgrey;
+  height: 79.5px;
+  border-bottom: 1px solid #F0F0F0;
 }
 
 #total-planning {
