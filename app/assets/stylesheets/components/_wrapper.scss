@@ -1,3 +1,25 @@
+/* -------------------->  WRAPPER SEPARATOR <-------------------- */
+.wrapper-separator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wrapper-separator-line {
+  margin:40px;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #ed462f;
+  width: 650px;
+}
+
+.wrapper-separator-icon {
+  font-size: 40px;
+  color: #ed462f;
+}
+
+/* ------------------------>  WRAPPERS <------------------------- */
+
 .wrapper {
   margin-top: 70px;
   background-color: white;
@@ -7,14 +29,14 @@
   margin-top: 70px;
   background-color: white;
   height: calc(100vh - 180px);
-  padding: 10px 20px;
+  padding: 10px 50px;
   border-radius:10px;
 }
 
 .wrapper-lightred {
   height: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
   border: 3px solid #f26e5c;
   border-radius: 5px;
   background-color: rgba(242,110,92,0.9);
@@ -48,3 +70,6 @@
   background-color: white;
 
 }
+
+
+
