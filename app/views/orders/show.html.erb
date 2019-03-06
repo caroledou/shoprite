@@ -4,12 +4,9 @@
   </div>
   <div class="row">
     <%= render "orders/composant-itemview" %>
-    <div class="col-xs-6 col-xs-offset-3" id="payment">
-      <%= render "payments/total" %>
-    </div>
     <div class="col-xs-6 col-xs-offset-3">
       <%= link_to new_order_payment_path(@order.id) do  %>
-        <p class="link-to-button" id="yummy">Proceed to Payment</p>
+        <p class="link-to-button" id="yummy">Proceed to payment of <%= render "payments/total" %></p>
       <% end %>
     </div>
   </div>
