@@ -20,7 +20,7 @@
       <%= render "payments/total" %>
     </div>
     <div class="col-xs-6 col-xs-offset-3">
-      <%= link_to new_order_delivery_path(@order.id) do  %>
+      <%= link_to new_order_payment_path(@order.id) do  %>
         <p class="link-to-button" id="yummy">Proceed to Payment</p>
       <% end %>
     </div>
