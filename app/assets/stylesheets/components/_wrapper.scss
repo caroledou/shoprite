@@ -6,11 +6,16 @@
   margin-top: 70px;
   background-color: white;
   height: calc(100vh - 180px);
+  padding: 10px 15px;
+  border-radius:10px;
 }
 
 .wrapper-lightred {
   height: 120px;
   background-color: #f26e5c;
+  h1 {
+    margin-top: 0;
+  }
 }
 
 .wrapper-lime {
