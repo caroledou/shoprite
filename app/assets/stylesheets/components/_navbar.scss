@@ -24,8 +24,8 @@
 
 /* User Avatar */
 .navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 
@@ -45,7 +45,8 @@
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bolder;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
@@ -62,13 +63,16 @@
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
-  font-size: 15px !important;
+  font-size: 18px !important;
   line-height: 22px !important;
   padding: 10px 20px;
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
+  .fa-user, .fa-shopping-basket, .fa-heart, .fa-sign-out-alt {
+    color: #ED462F;
+  }
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
