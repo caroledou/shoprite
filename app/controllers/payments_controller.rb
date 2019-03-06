@@ -2,6 +2,9 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
   def new
+    @order = Order.find(params[:order_id])
+    @delivery = Delivery.new
+    @delivery.address = current_user.address
     total_amount = 0
     @order.recipes.each do |key, value|
       @order.order_details.where(day: key).each do |detail|
@@ -38,5 +41,4 @@ private
   def set_order
     @order = Order.find(params[:order_id])
   end
-
 end
