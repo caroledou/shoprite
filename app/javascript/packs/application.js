@@ -1,10 +1,14 @@
 import "bootstrap";
+import "../plugins/flatpickr"
 
-// Selectionner le noeud du DOM qui a classe .flip-card
-const flipcard = document.querySelector(".flip-card .flip-card-inner");
-const i = document.querySelector(".card-info");
-// Ecouter le click sur ce noeud
-i.addEventListener("click", (event) => {
-  // Dans le callback, toggler la classe hover sur .flip-card
-  flipcard.classList.toggle("hover");
-});
+import { flipcardMoveBack } from '../plugins/flipback';
+
+flipcardMoveBack();
+
+import { flipcardMoveFront } from '../plugins/flipfront';
+
+flipcardMoveFront();
+
+import { recipeDrop } from '../plugins/recipe_dropdown';
+
+recipeDrop();
