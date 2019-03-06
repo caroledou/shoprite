@@ -21,6 +21,7 @@ class PaymentsController < ApplicationController
 
   def create
     @delivery = Delivery.new(delivery_params)
+    @delivery.delivery_date ||= Date.today
     @delivery.user = current_user
     @delivery.order = @order
     if @delivery.save
@@ -41,6 +42,7 @@ class PaymentsController < ApplicationController
     else
       render :new
     end
+
     rescue Stripe::CardError => e
       flash[:alert] = e.message
       redirect_to new_order_payment_path(@order)
