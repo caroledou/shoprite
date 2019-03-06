@@ -1,27 +1,69 @@
 .composant-view {
   display: flex;
   align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
+  border: 1px solid rgba(220,224,244,0.5);
+  border-radius: 3px;
 }
 
 .composant-view:last-child {
-  border-bottom: none;
+  // border-bottom: none;
 }
 
 .composant-img {
   width: 50px;
   border-radius: 50%;
+  padding-left: 10px;
 }
 
 .composant-name {
   font-size: 13px;
   font-weight: normal;
+  padding-left: 20px;
+  min-width: 100px;
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.composant-qty {
+  padding: 10px;
+  text-align: left;
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.composant-gr {
+  padding: 10px;
+  text-align: left;
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.composant-ingredient {
+  flex-grow: 1;
+  text-align: left;
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
 }
 
 .composant-price {
   font-size: 13px;
   font-weight: lighter;
-  opacity: 0.6;
   margin-top: 5px;
+  padding: 10px;
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.composant-button {
+  padding: 10px;
 }

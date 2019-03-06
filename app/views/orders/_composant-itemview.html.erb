@@ -10,13 +10,19 @@
      <li>
       <div class="composant-view">
         <img class="composant-img" src="https://www.themealdb.com/images/ingredients/<%= detail.composant.ingredient %>-Small.png">
-        <div class="composant-name">
-          <h3><%= detail.composant.quantity %>gr <%= detail.composant.ingredient %></h3>
+        <div class="composant-qty">
+          <h3><%= detail.composant.quantity %></h3>
+        </div>
+        <div class="composant-gr">
+          <h3>gr</h3>
+        </div>
+        <div class="composant-ingredient">
+          <h3><%= detail.composant.ingredient %></h3>
         </div>
         <div class="composant-price">
-          <h3><strong><%= detail.composant.price_cents %></strong></h3>
+          <h3><strong><%= detail.composant.price_cents %> CHF</strong></h3>
         </div>
-        <div>
+        <div class = composant-button>
           <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
