@@ -4,7 +4,7 @@
   <% total_amount += detail.composant.price_cents %>
   <% end %>
 <% end %>
-<h3>Total amount: <%= humanized_money_with_symbol(total_amount) %> </h3>
+<%= humanized_money_with_symbol(total_amount) %>
 
 
 

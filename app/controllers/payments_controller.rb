@@ -49,6 +49,7 @@ class PaymentsController < ApplicationController
   end
 
   def order_confirmed
+    @delivery = Delivery.where(order_id: @order).first
   end
 
   private

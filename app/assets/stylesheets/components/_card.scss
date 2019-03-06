@@ -20,6 +20,8 @@
 
 .card-name h2 {
   margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 50px;
 }
 
 .card-favorite {
@@ -27,6 +29,14 @@
   font-size: 40px;
   right: 20px;
   top: 10px;
+}
+
+.far.fa-heart {
+  color: white;
+}
+
+.far.fa-heart:hover {
+  color: red
 }
 
 .card-price {
@@ -45,10 +55,15 @@
 
 .card-time {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   left: 20px;
   font-size: 30px;
 }
+
+i.fa-clock {
+  font-size: 25px;
+}
+
 
 .card-info {
   position: absolute;
