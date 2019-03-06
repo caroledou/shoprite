@@ -13,14 +13,53 @@
   }
 }
 
-.x-container.max {
-  max-width: 1200px;
+/* -----------------------> HOW IT WORKS section <---------------------*/
+
+.howkitworks-logo {
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
 }
 
-.x-container.width {
-  width: 80%;
+.howkitworks-statement{
+  margin:10px;
+  padding: 20px 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
 }
 
+.howkitworks-description {
+  margin: 10px;
+  padding: 20px 50px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* Fontawesome */
+
+.fa-shipping-fast {
+    color: #ed462f;
+    // text-shadow: 1px 1px 1px #f26e5c;
+    font-size: 4.5em;
+    font-weight: lighter;
+    text-shadow: -1px 0 #ea2e2e, 0 1px #ea2e2e, 1px 0 #ea2e2e, 0 -1px #ea2e2e;
+}
+
+
+
+/* CAROUSEL section */
+
+.carousel-control {
+  color: #ED462F;
+}
+
+.carousel-caption {
+  bottom: 200px;
+  background-color: rgba(255,255,255, 0.3);
+}
 
 .carousel,.item,.active {
   height: 100%;
@@ -32,6 +71,15 @@
   height: 100%;
   border-radius: 5px;
   background-image:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3))
+}
+
+
+/* CREDENTIALS section */
+
+.header-section {
+  text-align: center;
+  background: white;
+  margin-top: 0px;
 }
 
 /* Background images are set within the HTML using inline CSS, not here */

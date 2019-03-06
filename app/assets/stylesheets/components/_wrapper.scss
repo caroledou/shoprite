@@ -2,28 +2,48 @@
   margin-top: 70px;
 }
 
-.wrapper-grey {
+.wrapper-banner {
   margin-top: 70px;
   background-color: white;
   height: calc(100vh - 180px);
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius:10px;
 }
 
 .wrapper-lightred {
-  height: 120px;
-  background-color: #f26e5c;
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 3px solid #f26e5c;
+  border-radius: 5px;
+  background-color: rgba(242,110,92,0.9);
   h1 {
     margin-top: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-size: 30px;
+    color: white;
+    text-shadow: -1px 0 #ed462f, 0 1px #ed462f, 1px 0 #ed462f, 0 -1px #ed462f;
+  }
+  p {
+    text-align: center;
+    color: white;
   }
 }
 
-.wrapper-lime {
-  height: 250px;
+.wrapper-howitworks {
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
   background-color: #83f23a;
+  padding: 10px 20px;
+  margin: 0px 20px;
 }
 
-.wrapper-sunrise {
-  height: 350px;
-  background-color: #f2df3a;
+.wrapper-credentials {
+  display: flex;
+  justify-content: space-around;
+  height: 220px;
+  background-color: white;
+
 }

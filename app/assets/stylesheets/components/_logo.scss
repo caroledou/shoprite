@@ -27,6 +27,14 @@
   color: white;
 }
 
-#circle-icon-home {
-  padding: 10px;
+
+.circle-icon:hover {
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  border-color: #ED462F;
+}
+
+.fa-bacon:hover {
+  color: #ED462F;
 }
