@@ -18,10 +18,10 @@
                 <i class="far fa-heart"></i>
               </div>
               <div class="card-price">
-               <h3>CHF 56</h3>
+               <h3>CHF <%= display_price_recipe(@recipe.id) %></h3>
               </div>
               <div class="card-time">
-                <i class="fas fa-stopwatch">  <%= @recipe.cooking_time %>'</i>
+                <i class="far fa-clock"> <%= display_cooking_time(@recipe.id) %> min</i>
               </div>
               <div class="card-info">
                 <i class="fas fa-info"></i>
@@ -68,7 +68,7 @@
     </div>
     <div class="cart-button">
       <%= link_to order_path(@order) do %>
-        <p class="link-to-button">See cart</p>
+        <p class="link-to-button">I'm done!</p>
       <% end %>
     </div>
   </div>

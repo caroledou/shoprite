@@ -14,4 +14,19 @@ module RecipesHelper
   def display_recipe_name(id)
     Recipe.find(id).name if id != ""
   end
+
+  def display_price_recipe(id)
+    s = 0
+    Composant.where(recipe_id: id).each { |c| s += c.price_cents}
+    return s
+  end
+
+  def display_cooking_time(id)
+    recipe = Recipe.find(id).cooking_time
+    if recipe >= 60
+      return "#{recipe/60}h"
+    else
+      recipe
+    end
+  end
 end
