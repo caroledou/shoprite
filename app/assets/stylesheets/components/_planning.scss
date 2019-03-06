@@ -11,7 +11,7 @@
   margin-left: 5px;
   font-family: 'Lato', 'sans-serif';
   font-weight: 700;
-  padding-top: 10px;
+  padding-top: 7px;
   padding-left: 10px;
   padding-bottom: 5px;
 }
@@ -25,7 +25,21 @@
 
 
 .row-planning {
-  height: 70px;
+  height: 67px;
   border-bottom: solid 1px lightgrey;
+}
 
+#total-planning {
+  display: flex;
+  background-color: lightgrey;
+  height: 40px;
+}
+
+#total-planning h3 {
+  font-family: 'Lato', 'sans-serif';
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  padding: 10px;
+  margin: auto;
 }
