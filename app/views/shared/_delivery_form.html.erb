@@ -1,0 +1,16 @@
+<%= simple_form_for [@order, @delivery] do |f| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="col-xs-12">
+         <h1>Choose your delivery time</h1>
+        <%= f.input :delivery_date, as: :string, input_html: {class: "datepicker"} %>
+      </div>
+      <div class="col-xs-12">
+        <%= f.input :address, label: 'To your place?  Change if you want to be delivered to another address!'%>
+      </div>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2">
+      <%= f.submit "Confirm delivery and proceed to payment", class: "link-to-button" %>
+    </div>
+  </div>
+<% end %>

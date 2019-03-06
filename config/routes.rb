@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :deliveries, only: [:new, :create]
     resources :payments, only: [:new, :create]
   end
-  resources :deliveries, only: [:show]    
+  resources :deliveries, only: [:show]
+  get "orders/:order_id/confirmed", to: "payments#order_confirmed", as: :order_confirmed
 end

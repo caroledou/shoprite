@@ -1,6 +1,7 @@
 class DeliveriesController < ApplicationController
   def show
     @delivery = Delivery.find(params[:id])
+    @order = @delivery.order
   end
 
   def new
