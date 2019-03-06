@@ -1,13 +1,14 @@
 <div class="container">
-  <h1>Thank you for your purchase!</h1>
-  <p>Your payment is confirmed and your purchase has been correctly ordered for total of:</p>
-  <%= render "payments/total" %>
- <p>Our team is already preparing it!</p>
-  <p>You will be delivered on <%= @delivery.delivery_date.strftime("%d/%m/%Y") %>
-<%= @delivery.delivery_date.strftime("at %I:%M%p") %> to the following address: <%= @delivery.address %>. </p>
-<div class="col-xs-8 col-xs-offset-2">
-  <%= link_to recipes_path  do %>
-    <p class="link-to-button">Purchase New Recipes</p>
-  <% end %>
-</div>
+  <div class="col-xs-8 col-xs-offset-2">
+    <h1>Thank you for your purchase!</h1>
+    <p>Your payment of <strong><%= render "payments/total" %></strong> is confirmed and your purchase has been correctly ordered!</p>
+    <p>Our team is already preparing it!</p>
+    <p>You will be delivered on <strong><%= @delivery.delivery_date.strftime("%d/%m/%Y") %>
+    <%= @delivery.delivery_date.strftime("at %I:%M%p") %></strong> to the following address: <strong><%= @delivery.address %></strong>. </p>
+  </div>
+  <div class="col-xs-4 col-xs-offset-4">
+    <%= link_to recipes_path  do %>
+      <p class="link-to-button">Purchase New Recipes</p>
+    <% end %>
+  </div>
 </div>
