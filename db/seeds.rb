@@ -2,12 +2,20 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning DB"
+User.destroy_all
 Delivery.destroy_all
 OrderDetail.destroy_all
 Order.destroy_all
 Composant.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
+
+# ------------------------ RECIPES SEED ------------------------
+
+puts "Creating account carole-albert"
+
+account = User.new(email: "carole-albert@foodlovers.ch", first_name: "Carole", name: "Albert", address: "Rue du Port-Franc 22, 1003 Lausanne", phone_number: "079 546 78 98", password: "123456" )
+account.save!
 
 # ------------------------ RECIPES SEED ------------------------
 
@@ -52,7 +60,7 @@ recipe_id_db.each do |id|
   recipe_counter += 1
   puts "Recipe #{recipe_counter} created"
 
-  # ------------------------ COMPOSANDS FOR A GIVEN RECIPE ------------------------
+  # ------------------------ COMPOSANTS FOR A GIVEN RECIPE ------------------------
 
   puts "...."
   puts "Creating Composants for recipe #{recipe_counter}..."
