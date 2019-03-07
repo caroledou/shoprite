@@ -9,6 +9,25 @@
   border: 1px solid #f26e5c;
 }
 
+.recipe-cart h2 {
+  text-align: left;
+}
+
+.placeholder-light h2 {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  color: grey;
+  font-weight: 100;
+}
+
+.placeholder-bold  h2{
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  color: black;
+}
+
 .ingredient-cart {
   background-color: rgba(242,110,92,0.1);
   padding: 10px;

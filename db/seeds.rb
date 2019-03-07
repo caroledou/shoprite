@@ -95,30 +95,35 @@ puts "Recipes Database created!"
 puts "Composants Database created!"
 puts "---------------------"
 
- # ------------------------ REVIEWS ------------------------
+# ------------------------ REVIEWS ------------------------
 
 puts "Creating reviews"
 
-excellent1 = Review.create!(content: "WOW! This was really yummy and easy to make! All the family loved it.", rating: "⭐️⭐️⭐️⭐️⭐️")
-excellent2 = Review.create!(content: "Delicious recipe I recommend for cosy diner with friends and family.", rating: "⭐️⭐️⭐️⭐️⭐️")
-excellent3 = Review.create!(content: "Looking forward to making this recipe again. Easy and really tasty!", rating: "⭐️⭐️⭐️⭐️⭐️")
-excellent4 = Review.create!(content: "BEST. RECIPE. EVER", rating: "⭐️⭐️⭐️⭐️⭐️")
-excellent5 = Review.create!(content: "It took me some few hours to cook but this recipe turned out to be AMAZING", rating: "⭐️⭐️⭐️⭐️⭐️")
+contents = ["WOW! This was really yummy and easy to make! All the family loved it.",
+  "Delicious recipe I recommend for cosy diner with friends and family.",
+  "Looking forward to making this recipe again. Easy and really tasty!",
+  "BEST. RECIPE. EVER",
+  "It took me some few hours to cook but this recipe turned out to be AMAZING",
+  "I tried this recipe for a family diner and my kids weren't very impressed...",
+  "This recipe is OK.",
+  "Not as tasty as expected but globally good.",
+  "Convenient food for lazy cook",
+  "Not worth the cooking time!",
+  "Sorry, I found it bland. Won't be making it again",
+  "Terrible - worst ever. Waste of my time & money",
+  "I do not recommend this recipe, it's a disaster...",
+  "This one was a thumbs down unfortunately, missing something.",
+  "Followed each step of this recipe and it turned out horrible! Avoid it!"
+]
 
-middle1 = Review.create!(content: "I tried this recipe for a family diner and my kids weren't very impressed...", rating: "⭐️⭐️⭐️")
-middle2 = Review.create!(content: "This recipe is OK.", rating: "⭐⭐️️⭐️️️")
-middle3 = Review.create!(content: "Not as tasty as expected but globally good.", rating: "⭐️️⭐️⭐️")
-middle4 = Review.create!(content: "Convenient food for lazy cook", rating: "⭐️️⭐️️️⭐️")
-middle5 = Review.create!(content: "Not worth the cooking time!", rating: "⭐️⭐️")
+ratings = ["⭐", "⭐️⭐️", "⭐️⭐️️⭐️", "⭐️️⭐️⭐️⭐️", "⭐️️⭐️️⭐️️⭐️️⭐️"]
 
-bad1 = Review.create!(content: "Sorry, I found it bland. Won't be making it again", rating: "⭐️️️")
-bad2 = Review.create!(content: "Terrible - worst ever. Waste of my time & money", rating: "⭐️️️")
-bad3 = Review.create!(content: "I do not recommend this recipe, it's a disaster...", rating: "⭐️️️")
-bad4 = Review.create!(content: "This one was a thumbs down unfortunately, missing something.", rating: "⭐️️️")
-bad5 = Review.create!(content: "Followed each step of this recipe and it turned out horrible! Avoid it!", rating: "⭐️️️")
+Recipe.all.each do |recipe|
+  recipe.reviews.create(
+      content: contents.sample,
+      rating: ratings.sample
+    )
+end
 
 puts "Done!"
-
-
-
 
