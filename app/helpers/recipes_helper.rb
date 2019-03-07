@@ -12,7 +12,8 @@ module RecipesHelper
   end
 
   def display_recipe_name(id)
-    Recipe.find(id).name if id != ""
+    recipe = Recipe.find(id).name if id != ""
+    recipe.length > 25 ? "#{recipe.first(25)}..." : recipe
   end
 
   def display_price_recipe(id)
