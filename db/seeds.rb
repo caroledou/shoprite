@@ -64,12 +64,19 @@ recipe_id_db.each do |id|
     recipe_serialized = open(url_recipe).read
     recipe = JSON.parse(recipe_serialized)
 
-    if recipe["meals"].first["strIngredient#{number}"] != ""
+    if recipe["meals"].first["strIngredient#{number}"] != "" && recipe["meals"].first["strIngredient#{number}"] != nil
+      if recipe["meals"].first["strMeasure#{number}"].start_with?(/^[1-9]/)
+        quantity = recipe["meals"].first["strMeasure#{number}"]
+      else
+        quantity = rand(1..7).to_i
+      end
+      price = rand(1..2)
       new_composant = Composant.new(
         recipe_id: new_recipe.id,
         ingredient: recipe["meals"].first["strIngredient#{number}"],
-        quantity: recipe["meals"].first["strMeasure#{number}"],
-        price_cents: rand(100..2000)/100.round.to_i
+        quantity: quantity,
+        price_cents: price,
+        # price_cents: rand(0.1..2).to_i
       )
       new_composant.save!
       composant_counter += 1
