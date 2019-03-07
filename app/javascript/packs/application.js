@@ -16,4 +16,5 @@ recipeDrop();
 import { placesAutocomplete } from '../plugins/init_autocomplete';
 
 placesAutocomplete();
+
 import { } from '../plugins/search';
