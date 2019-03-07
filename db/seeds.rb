@@ -10,7 +10,7 @@ Composant.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
 
-# ------------------------ RECIPES SEED ------------------------
+# ------------------------ USER ------------------------
 
 puts "Creating account carole-albert"
 
@@ -93,5 +93,9 @@ end
 puts "Recipes Database created!"
 puts "Composants Database created!"
 puts "---------------------"
+
+ # ------------------------ REVIEWS ------------------------
+
+
 
 
