@@ -24,7 +24,7 @@ puts "Parsing 188 Recipe IDs from 12 Categories..."
 
 recipe_id_db = []
 
-Recipe::RECIPE_CATEGORIES.each do |category|
+Recipe::RECIPE_CATEGORIES.take(1).each do |category|
   url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=#{category}"
   categ_serialized = open(url).read
   categ = JSON.parse(categ_serialized)
@@ -99,30 +99,29 @@ puts "---------------------"
 
 puts "Creating reviews"
 
-contents = ["WOW! This was really yummy and easy to make! All the family loved it.",
-  "Delicious recipe I recommend for cosy diner with friends and family.",
-  "Looking forward to making this recipe again. Easy and really tasty!",
-  "BEST. RECIPE. EVER",
-  "It took me some few hours to cook but this recipe turned out to be AMAZING",
-  "I tried this recipe for a family diner and my kids weren't very impressed...",
-  "This recipe is OK.",
-  "Not as tasty as expected but globally good.",
-  "Convenient food for lazy cook",
-  "Not worth the cooking time!",
-  "Sorry, I found it bland. Won't be making it again",
-  "Terrible - worst ever. Waste of my time & money",
-  "I do not recommend this recipe, it's a disaster...",
-  "This one was a thumbs down unfortunately, missing something.",
-  "Followed each step of this recipe and it turned out horrible! Avoid it!"
+contents = ["WOW! This was really yummy and easy to make! All the family loved it ⭐️️⭐️️⭐️️⭐️️⭐️ ",
+  "Delicious recipe I recommend for cosy diner with friends and family ⭐️️️️⭐️️⭐️️⭐️",
+  "Looking forward to making this recipe again. Easy and really tasty! ⭐️️️️⭐️️⭐️️⭐️",
+  "BEST. RECIPE. EVER ⭐️️⭐️️⭐️️⭐️️⭐️",
+  "It took me some few hours to cook but this recipe turned out to be AMAZING ⭐️️⭐️️⭐️️⭐️️⭐️",
+  "I tried this recipe for a family diner and my kids weren't very impressed... ⭐️️⭐️⭐️⭐️",
+  "This recipe is OK ⭐️⭐️⭐️",
+  "Not as tasty as expected but globally good ⭐️⭐️⭐️",
+  "Convenient food for lazy cook ⭐️️⭐️⭐️⭐️",
+  "Not worth the cooking time! ⭐️️⭐️️",
+  "Sorry, I found it bland. Won't be making it again ⭐️",
+  "Terrible - worst ever. Waste of my time & money ⭐️️",
+  "I do not recommend this recipe, it's a disaster... ⭐️️",
+  "This one was a thumbs down unfortunately, missing something ⭐️⭐️",
+  "Followed each step of this recipe and it turned out horrible! Avoid it! ⭐️️"
 ]
 
-ratings = ["⭐", "⭐️⭐️", "⭐️⭐️️⭐️", "⭐️️⭐️⭐️⭐️", "⭐️️⭐️️⭐️️⭐️️⭐️"]
-
-Recipe.all.each do |recipe|
-  recipe.reviews.create(
-      content: contents.sample,
-      rating: ratings.sample
-    )
+3.times do
+  Recipe.all.each do |recipe|
+    recipe.reviews.create(
+        content: contents.sample,
+      )
+  end
 end
 
 puts "Done!"
