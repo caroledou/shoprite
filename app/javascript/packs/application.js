@@ -13,6 +13,8 @@ import { recipeDrop } from '../plugins/recipe_dropdown';
 
 recipeDrop();
 
+import { placesAutocomplete } from '../plugins/init_autocomplete';
+
+placesAutocomplete();
+
 import { } from '../plugins/search';
-
-
