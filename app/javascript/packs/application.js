@@ -12,3 +12,7 @@ flipcardMoveFront();
 import { recipeDrop } from '../plugins/recipe_dropdown';
 
 recipeDrop();
+
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
+initAutocomplete();
