@@ -13,7 +13,6 @@ import { recipeDrop } from '../plugins/recipe_dropdown';
 
 recipeDrop();
 
-import { search } from '../plugins/search';
+import { } from '../plugins/search';
 
-search();
 
