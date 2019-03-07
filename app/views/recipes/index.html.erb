@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="index-recipes">
   <div class="grid">
     <div class="week-element">
       <%= render 'shared/weekly_planning' %>
@@ -55,12 +55,12 @@
       </div>
     </div>
     <div class="buttons-element">
-      <div>
+      <div class="index-button">
         <%=link_to recipes_path(category: @category, recipe_ids: array_of_burned_ids(params[:recipe_ids])) do %>
           <p class="link-to-button">Yikes</p>
         <% end %>
       </div>
-      <div>
+      <div class="index-button">
         <%= link_to orders_path(recipe_id: @recipe.id), method: 'post' do  %>
           <p class="link-to-button" id="yummy">Yummy</p>
         <% end %>

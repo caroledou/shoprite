@@ -2,13 +2,18 @@
   <% @order.recipes.each do |key, value| %>
     <div class="row-planning">
       <h2><%= key.capitalize %> : </h2>
-      <ul class="list-unstyled">
-        <li><%= display_recipe_name(value) %></li>
+      <ul class="list-unstyled" id="content-row">
+        <div>
+        <li><%= display_recipe_name(value).length > 20 ? "#{display_recipe_name(value).first(25)}..." : display_recipe_name(value) %></li>
+        </div>
+        <div>
+          <p>CHF <%= display_price_recipe(value) %></p>
+        </div>
       </ul>
     </div>
   <% end %>
   <div id="total-planning">
-    <p>Total for the week: <%= render "payments/total" %></p>
+    <p>Total: <%= render "payments/total" %></p>
   </div>
 </div>
 
