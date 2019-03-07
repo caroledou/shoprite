@@ -10,9 +10,13 @@
 
 
 <div class="form-inline">
-  <%= form_tag recipes_path, method: :get do %>
-    <%= select_tag :category, options_for_select(Recipe::RECIPE_CATEGORIES), prompt: "Select something" %>
-    <%= submit_tag "Find recipes", class: 'link-to-button' %>
+  <%= form_tag recipes_path, method: :get, id: "search" do %>
+    <div class="custom-select" style="width:350px; height:50px;">
+      <div>
+        <%= select_tag :category, options_for_select(Recipe::RECIPE_CATEGORIES), prompt: "What are you hungry for?" %>
+      </div>
+    </div>
+  <%= submit_tag "Shop", class: 'link-to-button' %>
   <% end %>
 </div>
 
