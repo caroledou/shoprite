@@ -5,9 +5,17 @@ puts "Cleaning DB"
 Delivery.destroy_all
 OrderDetail.destroy_all
 Order.destroy_all
+User.destroy_all
 Composant.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
+
+# ------------------------ USER ------------------------
+
+puts "Creating account carole-albert"
+
+account = User.new(email: "carole-albert@foodlovers.ch", first_name: "Carole", name: "Albert", address: "Rue du Port-Franc 22, 1003 Lausanne", phone_number: "079 546 78 98", password: "123456" )
+account.save!
 
 # ------------------------ RECIPES SEED ------------------------
 
@@ -52,7 +60,7 @@ recipe_id_db.each do |id|
   recipe_counter += 1
   puts "Recipe #{recipe_counter} created"
 
-  # ------------------------ COMPOSANDS FOR A GIVEN RECIPE ------------------------
+  # ------------------------ COMPOSANTS FOR A GIVEN RECIPE ------------------------
 
   puts "...."
   puts "Creating Composants for recipe #{recipe_counter}..."
@@ -85,5 +93,29 @@ end
 puts "Recipes Database created!"
 puts "Composants Database created!"
 puts "---------------------"
+
+ # ------------------------ REVIEWS ------------------------
+
+excellent1 = Review.create!(content: "WOW! This was really yummy and easy to make! All the family loved it.", rating: "⭐️⭐️⭐️⭐️⭐️")
+excellent2 = Review.create!(content: "Delicious recipe I recommend for cosy diner with friends and family.", rating: "⭐️⭐️⭐️⭐️⭐️")
+excellent3 = Review.create!(content: "Looking forward to making this recipe again. Easy and really tasty!", rating: "⭐️⭐️⭐️⭐️⭐️", id: recipe_ids.sample)
+excellent4 = Review.create!(content: "BEST. RECIPE. EVER", rating: "⭐️⭐️⭐️⭐️⭐️")
+excellent5 = Review.create!(content: "It took me some few hours to cook but this recipe turned out to be AMAZING", rating: "⭐️⭐️⭐️⭐️⭐️")
+
+middle1 = Review.create!(content: "I tried this recipe for a family diner and my kids weren't very impressed...", rating: "⭐️⭐️⭐️")
+middle2 = Review.create!(content: "This recipe is OK.", rating: "⭐⭐️️⭐️️️")
+middle3 = Review.create!(content: "Not as tasty as expected but globally good.", rating: "⭐️️⭐️⭐️")
+middle4 = Review.create!(content: "Convenient food for lazy cook", rating: "⭐️️⭐️️️⭐️")
+middle5 = Review.create!(content: "Not worth the cooking time!", rating: "⭐️⭐️")
+
+bad1 = Review.create!(content: "Sorry, I found it bland. Won't be making it again", rating: "⭐️️️")
+bad2 = Review.create!(content: "Terrible - worst ever. Waste of my time & money", rating: "⭐️️️")
+bad3 = Review.create!(content: "I do not recommend this recipe, it's a disaster...", rating: "⭐️️️")
+bad4 = Review.create!(content: "This one was a thumbs down unfortunately, missing something.", rating: "⭐️️️")
+bad5 = Review.create!(content: "Followed each step of this recipe and it turned out horrible! Avoid it!", rating: "⭐️️️")
+
+puts "Done!"
+
+
 
 
