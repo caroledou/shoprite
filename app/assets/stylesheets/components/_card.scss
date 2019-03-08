@@ -141,13 +141,15 @@ i.fa-clock {
 }
 
 #show-review p {
-  padding: 10px;
+  padding: 20px;
   width: 760px;
-  height: 40px;
+  height: 60px;
   font-size: 18px;
   text-shadow: 0 0 0 rgba(0,0,0,0);
   font-weight: 400;
   box-shadow: 1px 1px 1px 1px lightgrey;
+  display: flex;
+  justify-content: space-between;
 }
 
 #show-ingredients {
