@@ -122,6 +122,7 @@ contents = ["WOW! This was really yummy! All the family loved it -- ⭐️️⭐
   "This one was a thumbs down unfortunately, missing something -- ⭐️⭐️",
   "Followed each step of this recipe, turned out horrible! -- ⭐️️"
 ]
+
 avatars = [
   "http://www.roblaceyphotographer.co.uk/wp-content/uploads/2017/02/Headshot-square.jpg",
   "http://www.hilbgroup.com/wp-content/uploads/2018/03/hilb-group-headshots-6617-web-square.jpg",
@@ -202,13 +203,11 @@ avatars = [
   "https://rockhealth.com/wp-content/uploads/2015/07/halle-headshot-square-2.jpg"
 ]
 
-reviewer = avatars.sample
-
 2.times do
   Recipe.all.each do |recipe|
     recipe.reviews.create(
         content: contents.sample,
-        rating: reviewer
+        rating: avatars.sample
       )
   end
 end

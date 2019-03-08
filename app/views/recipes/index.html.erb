@@ -46,7 +46,10 @@
               <div id="show-review">
                 <h3>Reviews</h3>
                 <% @recipe.reviews.each do |review| %>
+                <div id="review-content">
+                  <img id="reviewer" src="<%= review.rating %>">
                   <p><%= review.content %></p>
+                </div>
                 <% end %>
               </div>
               <div class="card-info" id="show-back">
