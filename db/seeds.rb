@@ -128,7 +128,7 @@ avatars = [
   "https://philadelphiacorporateheadshots.org/wp-content/gallery/people/True-Capital-July-2014-36-Square.jpg",
   "https://jkaplanortho.com/wp-content/uploads/2018/10/dr-kaplan-headshot-square.jpg",
   "https://www.boutiquephotographer.net/wp-content/uploads/2015/04/WORK_Headshot-Square.003_WEB.jpg",
-  "https://www.christenseninstitute.org/wp-content/uploads/2018/08/Mark-Johnson-Headshot-Square.jpg"
+  "https://www.christenseninstitute.org/wp-content/uploads/2018/08/Mark-Johnson-Headshot-Square.jpg",
   "https://lyrictheatreokc.com/wp-content/uploads/2015/09/Geno-Square-Headshot.jpeg",
   "https://www.surfmedia.com/wp-content/uploads/2014/07/Camron-headshot-square.jpg",
   "http://www.homexpertsuk.com/wp-content/uploads/2016/10/headshot-colour-1-square.jpg",
