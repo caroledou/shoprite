@@ -124,15 +124,14 @@ i.fa-clock {
 
 #show-photo {
   position: absolute;
-  top: 30px;
-  right: 20px;
+  left: 20px;
   border: solid white 5px;
   box-shadow: 1px 1px 1px 1px lightgrey;
 }
 
 #show-review {
   position: absolute;
-  bottom: 10px;
+  bottom: 55px;
   left: 30px;
   color: black;
 }
@@ -143,10 +142,26 @@ i.fa-clock {
 
 #show-review p {
   padding: 10px;
-  width: 730px;
+  width: 760px;
   height: 40px;
   font-size: 18px;
   text-shadow: 0 0 0 rgba(0,0,0,0);
   font-weight: 400;
   box-shadow: 1px 1px 1px 1px lightgrey;
 }
+
+#show-ingredients {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+  color: black;
+
+}
+
+#show-ingredients li {
+  font-size: 18px;
+  text-shadow: 0 0 0 rgba(0,0,0,0);
+  font-weight: 400;
+
+}
+
