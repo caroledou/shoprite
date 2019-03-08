@@ -11,11 +11,11 @@
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
       <% if user_signed_in? %>
+
+        <!-- Links when logged in -->
         <div class="logo">
           <h2>Shoprite</h2>
         </div>
-
-        <!-- Links when logged in -->
         <%= link_to "Shop", recipes_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Cook", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
