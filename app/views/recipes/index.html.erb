@@ -32,15 +32,16 @@
             <div class="card" id="show-recipe">
               <div class="card-name" id="show-name">
                 <h2> <%= @recipe.name %></h2>
+                <h2 id="show-photo"><%= cl_image_tag( @recipe.photo,width: 270, height: 170, crop: :fill) %></h2>
+              </div>
+              <div id="show-ingredients">
                 <h3>Ingrédients</h3>
                 <% @recipe.composants.limit(5).each do |composant|%>
-                <ul class="list-styled">
+                <ul class="list-unstyled">
+                  <img class="composant-img" src="https://www.themealdb.com/images/ingredients/<%= composant.ingredient %>-Small.png">
                   <li><%= composant.quantity %>gr <%= composant.ingredient %></li>
                 </ul>
                 <% end %>
-              </div>
-              <div id="show-photo">
-                <%= cl_image_tag( @recipe.photo,width: 300, height: 200, crop: :fill) %>
               </div>
               <div id="show-review">
                 <h3>Reviews</h3>
