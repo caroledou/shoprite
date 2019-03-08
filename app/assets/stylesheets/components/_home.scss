@@ -37,10 +37,10 @@
   margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 20px 60px;
+  padding: 10px 50px;
   text-align: center;
-  font-weight: bold;
-  font-size: 25px;
+  font-weight: bolder;
+  font-size: 30px;
   color: red;
   background-color: white;
   border-left: 2px solid #ed462f;
@@ -52,19 +52,32 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding: 20px 50px;
+  padding: 20px 30px;
   text-align: center;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 25px;
   background-color: white;
   border-left: 2px solid #ed462f;
   border-right: 2px solid #ed462f;
   border-bottom: 2px solid #ed462f;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  strong {
+    color: #ed462f;
+    font-family: 'Lobster', 'cursive';
+    font-size: 30px;
+  }
 }
 
 /* Fontawesome */
+
+.fa-tablet-alt {
+    color: white;
+    // text-shadow: 1px 1px 1px #f26e5c;
+    font-size: 4.5em;
+    font-weight: lighter;
+    text-shadow: -1px 0 #ea2e2e, 0 1px #ea2e2e, 1px 0 #ea2e2e, 0 -1px #ea2e2e;
+}
 
 .fa-shipping-fast {
     color: white;
@@ -74,6 +87,13 @@
     text-shadow: -1px 0 #ea2e2e, 0 1px #ea2e2e, 1px 0 #ea2e2e, 0 -1px #ea2e2e;
 }
 
+.fa-carrot {
+    color: white;
+    // text-shadow: 1px 1px 1px #f26e5c;
+    font-size: 4.5em;
+    font-weight: lighter;
+    text-shadow: -1px 0 #ea2e2e, 0 1px #ea2e2e, 1px 0 #ea2e2e, 0 -1px #ea2e2e;
+}
 
 /* ----------------------> CAROUSEL SECTION <---------------------- */
 
