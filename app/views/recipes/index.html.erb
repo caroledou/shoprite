@@ -37,7 +37,8 @@
               <div id="show-ingredients">
                 <h3>Ingrédients</h3>
                 <% @recipe.composants.limit(5).each do |composant|%>
-                <ul class="list-styled">
+                <ul class="list-unstyled">
+                  <img class="composant-img" src="https://www.themealdb.com/images/ingredients/<%= composant.ingredient %>-Small.png">
                   <li><%= composant.quantity %>gr <%= composant.ingredient %></li>
                 </ul>
                 <% end %>

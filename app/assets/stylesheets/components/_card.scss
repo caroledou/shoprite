@@ -158,10 +158,19 @@ i.fa-clock {
 
 }
 
+#show-ingredients ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  max-width: 300px;
+
+
+}
+
 #show-ingredients li {
   font-size: 18px;
   text-shadow: 0 0 0 rgba(0,0,0,0);
   font-weight: 400;
-
+  margin-left: 10px;
 }
 
