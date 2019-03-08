@@ -11,7 +11,7 @@
     <p><strong><%= @delivery.address %></strong>.</p>
   </div>
   <div class="col-xs-4 col-xs-offset-4">
-    <img src=http://sommersetretirement.com/assets/grocery_bag_clip_art.jpg" alt="" style="width: 200px; height: 250px; margin-left: 80px; ">
+    <%= image_tag "grocery.jpg", alt: "alttext", style:"width: 200px; height: 250px; margin-left: 80px;" %>
     <%= link_to recipes_path  do %>
       <p class="link-to-button">Purchase New Recipes</p>
     <% end %>
