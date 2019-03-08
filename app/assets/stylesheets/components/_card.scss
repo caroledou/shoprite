@@ -136,12 +136,16 @@ i.fa-clock {
   color: black;
 }
 
+#review-content p {
+  margin: 0;
+}
+
 #show-review h3 {
   margin-bottom: 5px;
 }
 
-#show-review p {
-  padding: 20px;
+#review-content {
+  margin-bottom: 10px;
   width: 760px;
   height: 60px;
   font-size: 18px;
@@ -149,7 +153,8 @@ i.fa-clock {
   font-weight: 400;
   box-shadow: 1px 1px 1px 1px lightgrey;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 #show-ingredients {
@@ -165,8 +170,6 @@ i.fa-clock {
   align-items: center;
   margin-bottom: 0;
   max-width: 300px;
-
-
 }
 
 #show-ingredients li {
