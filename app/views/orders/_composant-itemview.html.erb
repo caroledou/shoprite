@@ -1,7 +1,9 @@
 
 <% @order.recipes.each do |key, value| %>
 <div class="recipe-cart <%= key %> col-xs-8 col-xs-offset-2">
-  <h2><%= key.capitalize %> : <%= display_recipe_name(value) %></h2>
+  <h2 class="<%= value == "" ? "placeholder-light" : "placeholder-bold" %>">
+      <%= key.capitalize %> :</h2>
+  <h2 class="<%= value == "" ? "placeholder-light" : "placeholder-bold" %>"><%= value == "" ? "Eating out 😋" : display_recipe_name(value) %></h2>
   <i class="fas fa-chevron-down"></i>
 </div>
 <div class="ingredient-cart <%= key %> col-xs-8 col-xs-offset-2">
