@@ -1,12 +1,17 @@
 <div class="container">
-  <div class="col-xs-8 col-xs-offset-2">
+  <div class="col-xs-8 col-xs-offset-2" style="text-align: center;">
     <h1>Thank you for your purchase!</h1>
-    <p>Your payment of <strong><%= render "payments/total" %></strong> is confirmed and your purchase has been correctly ordered!</p>
+    <p>Your payment of </p>
+    <p><strong><%= render "payments/total" %></strong></p>
+    <p>is confirmed and your purchase has been correctly ordered!</p>
     <p>Our team is already preparing it!</p>
-    <p>You will be delivered on <strong><%= @delivery.delivery_date.strftime("%d/%m/%Y") %>
-    <%= @delivery.delivery_date.strftime("at %I:%M%p") %></strong> to the following address: <strong><%= @delivery.address %></strong>. </p>
+    <p>You will be delivered on</p>
+    <p><strong><%= @delivery.delivery_date.strftime("%d/%m/%Y") %> <%= @delivery.delivery_date.strftime("at %I:%M%p") %></strong></p>
+    <p>to the following address:</p>
+    <p><strong><%= @delivery.address %></strong>.</p>
   </div>
   <div class="col-xs-4 col-xs-offset-4">
+    <%= image_tag "grocery.jpg", alt: "alttext", style:"width: 200px; height: 250px; margin-left: 80px;" %>
     <%= link_to recipes_path  do %>
       <p class="link-to-button">Purchase New Recipes</p>
     <% end %>
