@@ -82,17 +82,41 @@
 }
 
 .carousel-caption {
-  margin-top: 80px;
-  margin-left: 0px;
-  width: 1450px;
+  position: absolute;
+  top: 80px;
+  padding-top: 0;
+  width: 1000px;
   text-align: left;
-  padding-left: 30px;
   color: #ed462f;
   font-size: 25px;
-  left: 0;
-  bottom: 200px;
 }
 
+.carousel-caption h3 {
+  position: absolute;
+  font-size: 50px;
+  bottom: 100px;
+  right: 0;
+}
+
+.carousel-caption h1 {
+  position: absolute;
+  top: 80px;
+  font-size: 100px;
+}
+
+.carousel-caption h4 {
+  position: absolute;
+  font-size: 50px;
+  color: #FCF9F6;
+}
+
+.carousel-caption h5 {
+  position: absolute;
+  font-size: 60px;
+  bottom: 120px;
+  right: 0;
+  color: #6A3116;
+}
 .background-white {
   //background-color: rgba(255,255,255, 0.5);
 }
@@ -106,6 +130,7 @@
 .carousel-inner {
   height: 100%;
   border-radius: 5px;
+  position: relative;
   //background-image:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3))
 }
 
